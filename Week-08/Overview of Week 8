@@ -1,5 +1,6 @@
 Overview of Week 8
 
+
 December 16 - December 23
 
 Topics: 
@@ -13,3 +14,6 @@ Principal component analysis is a method for projecting data into a lower dimens
 It works by finding the space which maximizes the variance of the projections, or equivalently, 
 minimizes the reconstruction error. Mathematically, it corresponds to computing the SVD 
 of the transformed data, or the spectral decomposition of the covariance matrix.
+
+
+% http://metacademy.org/roadmaps/cjrd/coursera_ml_supplement
