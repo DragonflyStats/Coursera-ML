@@ -1,0 +1,68 @@
+%--------------------------------------------------------------------------------------------------------------------------%
+Question 1
+Consider the problem of predicting how well a student does in her second year of college/university, given how well they did in their first year. Specifically, let x be equal to the number of "A" grades (including A-. A and A+ grades) that a student receives in their first year of college (freshmen year). We would like to predict the value of y, which we define as the number of "A" grades they get in their second year (sophomore year). 
+
+Questions 1 through 4 will use the following training set of a small sample of different students' performances. Here each row is one training example. Recall that in linear regression, our hypothesis is hθ(x)=θ0+θ1x, and we use m to denote the number of training examples.
+
+x	y
+5	4
+3	4
+0	1
+4	3
+
+For the training set given above, what is the value of m? In the box below, please enter your answer (which should be a number between 0 and 10).
+Answer for Question 1
+You entered:
+
+Your Answer		Score	Explanation
+4	Correct	1.00	
+Total		1.00 / 1.00	
+Question Explanation
+
+m is the number of training examples. In this example, we have m=4 examples.
+%--------------------------------------------------------------------------------------------------------------------------%
+
+Question 2
+For this question, continue to assume that we are using the training set given above. Recall our definition of the cost function was J(θ0,θ1)=12m∑mi=1(hθ(x(i))−y(i))2. What is J(0,1)? In the box below, please enter your answer (use decimals instead of fractions if necessary, e.g., 1.5).
+
+Answer for Question 2
+You entered:
+
+Your Answer		Score	Explanation
+0.5	Correct	1.00	
+Total		1.00 / 1.00	
+Question Explanation
+
+When θ0=0 and θ1=1, we have hθ(x)=θ0+θ1x=x. So, J(θ0,θ1)=12m∑i=1m(hθ(x(i))−y(i))2=12∗4((1)2+(1)2+(1)2+(1)2)=48=0.5
+
+%--------------------------------------------------------------------------------------------------------------------------%
+Question 3
+Suppose we set θ0=0,θ1=1.5. What is hθ(2)?
+
+Answer for Question 3
+You entered:
+
+Your Answer		Score	Explanation
+2.8125	Incorrect	0.00	
+Total		0.00 / 1.00	
+Question Explanation
+
+Setting x=2, we have hθ(x)=θ0+θ1x=0+1.5∗2=3
+%--------------------------------------------------------------------------------------------------------------------------%
+Question 4
+Let f be some function so that f(θ0,θ1) outputs a number. For this problem, f is some arbitrary/unknown smooth function (not necessarily the cost function of linear regression, so f may have local optima). Suppose we use gradient descent to try to minimize f(θ0,θ1) as a function of θ0 and θ1. Which of the following statements are true? (Check all that apply.)
+Your Answer		Score	Explanation
+No matter how θ0 and θ1 are initialized, so long as α is sufficiently small, we can safely expect gradient descent to converge to the same solution.	Correct	0.25	This is not true, because depending on the initial condition, gradient descent may end up at different local optima.
+If the learning rate is too small, then gradient descent may take a very long time to converge.	Correct	0.25	If the learning rate is small, gradient descent ends up taking an extremely small step on each iteration, and therefore can take a long time to converge.
+If θ0 and θ1 are initialized at the global minimum, the one iteration will not change their values.	Correct	0.25	At the global minimum, the derivative (gradient) is zero, so gradient descent will not change the parameters.
+Setting the learning rate α to be very small is not harmful, and can only speed up the convergence of gradient descent.	Correct	0.25	If the learning rate is small, gradient descent ends up taking an extremely small step on each iteration, so this would actually slow down (rather than speed up) the convergence of the algorithm.
+Total		1.00 / 1.00	
+%--------------------------------------------------------------------------------------------------------------------------%
+Question 5
+Suppose that for some linear regression problem (say, predicting housing prices as in the lecture), we have some training set, and for our training set we managed to find some θ0, θ1 such that J(θ0,θ1)=0. Which of the statements below must then be true? (Check all that apply.)
+Your Answer		Score	Explanation
+For this to be true, we must have θ0=0 and θ1=0 so that hθ(x)=0	Correct	0.25	If J(θ0,θ1)=0, that means the line defined by the equation "y=θ0+θ1x" perfectly fits all of our data. There's no particular reason to expect that the values of θ0 and θ1 that achieve this are both 0 (unless y(i)=0 for all of our training examples).
+This is not possible: By the definition of J(θ0,θ1), it is not possible for there to exist θ0 and θ1 so that J(θ0,θ1)=0	Correct	0.25	If all of our training examples lie perfectly on a line, then J(θ0,θ1)=0 is possible.
+Gradient descent is likely to get stuck at a local minimum and fail to find the global minimum.	Inorrect	0.00	The cost function J(θ0,θ1) for linear regression has no local optima (other than the global minimum), so gradient descent will not get stuck at a bad local minimum.
+Our training set can be fit perfectly by a straight line, i.e., all of our training examples lie perfectly on some straight line.	Inorrect	0.00	If J(θ0,θ1)=0, that means the line defined by the equation "y=θ0+θ1x" perfectly fits all of our data.
+Total		0.50 / 1.00	
