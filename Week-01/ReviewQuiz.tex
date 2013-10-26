@@ -1,0 +1,46 @@
+%--------------------------------------------------------------------%
+\subsection*{Question 1}
+A computer program is said to learn from experience E with respect to some task T and some performance measure P if its performance on T, as measured by P, improves with experience E. Suppose we feed a learning algorithm a lot of historical weather data, and have it learn to predict weather. In this setting, what is E?
+
+\begin{itemize}
+\item The process of the algorithm examining a large amount of historical weather data.	Correct	1.00	It is by examining the historical weather data that the learning algorithm improves it's performance, so this is the experience E.
+The weather prediction task.			
+The probability of it correctly predicting a future date's weather.			
+None of these.			
+Total		1.00 / 1.00	
+%--------------------------------------------------------------------%
+\subsection*{Question 2}
+Suppose you are working on weather prediction, and you would like to predict whether or not it will be raining at 5pm tomorrow. You want to use a learning algorithm for this. Would you treat this as a classification or a regression problem?
+
+	Classification is appropriate when we are trying to predict one of a small number of discrete-valued outputs, such as whether it will rain (which we might designate as class 0), or not (say class 1).
+Regression is appropriate when we are trying to predict a continuous-valued output; but in this problem we are trying to predict one of 2 possible discrete-valued outputs (raining or not)
+	
+%--------------------------------------------------------------------%
+\subsection*{Question 3}
+Suppose you are working on stock market prediction, and you would like to predict the price of a particular stock tomorrow (measured in dollars). You want to use a learning algorithm for this. Would you treat this as a classification or a regression problem?
+
+Regression is appropriate when we are trying to predict a continuous-valued output, since as the price of a stock (similar to the housing prices example in the lectures).
+Total		1.00 / 1.00	
+%--------------------------------------------------------------------%
+\subsection*{Question 4}
+Some of the problems below are best addressed using a supervised learning algorithm, and the others with an unsupervised learning algorithm. Which of the following would you apply supervised learning to? (Select all that apply.) In each case, assume some appropriate dataset is available for your algorithm to learn from.
+
+
+\begin{itemize}
+\item Given 50 articles written by male authors, and 50 articles written by female authors, learn to predict the gender of a new manuscript's author (when the identity of this author is unknown).	\\ Correct	0.25	This can be addressed as a supervised learning, classification, problem, where we learn from the labeled data to predict gender.
+\item Have a computer examine an audio clip of a piece of music, and classify whether or not there are vocals (i.e., a human voice singing) in that audio clip, or if it is a clip of only musical instruments (and no vocals).	\\Correct	0.25	This can be addressed using supervised learning, in which we learn from a training set of audio clips which have been labeled as either having vocals or not.
+\item Take a collection of 1000 essays written on the US Economy, and find a way to automatically group these essays into a small number of groups of essays that are somehow "similar" or "related".	\\ Correct	0.25	This is an unsupervised learning/clustering problem (similar to the Google News example in the lectures).
+\item Given a large dataset of medical records from patients suffering from heart disease, try to learn whether there might be different clusters of such patients for which we might tailor separate treatements.	\\ Correct	0.25	This can be addressed using an unsupervised learning, clustering, algorithm, in which we group patients into different clusters.
+\end{itemize}
+	
+%--------------------------------------------------------------------%
+\subsection*{Question 5}
+Which of these is a reasonable definition of machine learning?
+
+\begin{itemize}
+\item  Machine learning means from labeled data.			
+\item Machine learning is the science of programming computers.			
+\item Correct Machine learning is the field of study that gives computers the ability to learn without being explicitly programmed. 
+  \\ This was the definition given by Arthur Samuel (who had written the famous checkers playing, learning program).
+\item Machine learning is the field of allowing robots to act intelligently.			
+\end{itemize}
