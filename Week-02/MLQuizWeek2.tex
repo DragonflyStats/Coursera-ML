@@ -1,0 +1,65 @@
+4
+0.5
+3
+
+NO No matter how $\theta_0$ and $\theta_1$ are initialized, so long as $\alpha$ is sufficiently small, we 
+can safely expect gradient descent to converge to the same solution.	
+Correct	0.25	
+This is not true, because depending on the initial condition, gradient descent may end up at different local optima.
+
+YES If the learning rate is too small, then gradient descent may take a very long time to converge.	
+    Correct	0.25	
+    If the learning rate is small, gradient descent ends up taking an extremely small step on each iteration, and therefore can take a long time to converge.
+
+YES If $\theta_0$ and $\theta_1$ are initialized at the global minimum, the one iteration will not change their values.	
+   Correct	0.25	
+    At the global minimum, the derivative (gradient) is zero, so gradient descent will not change the parameters.
+
+NO Setting the learning rate $\alpha$ to be very small is not harmful, and can only speed up the convergence of gradient descent.	
+   Correct	0.25	
+   If the learning rate is small, gradient descent ends up taking an extremely small step on each iteration, so this would actually slow down (rather than speed up) the convergence of the algorithm.
+
+If θ0 and θ1 are initialized at a local minimum, the one iteration will not 
+change their values.	Inorrect	0.00	
+At a local minimum, the derivative (gradient) is zero, so gradient descent 
+will not change the parameters.
+
+YES If the first few iterations of gradient descent cause f(θ0,θ1) to increase rather than decrease, then the most likely cause is that we have set the learning rate α to too large a value.	Inorrect	0.00	If alpha were small enough, then gradient descent should always successfully take a tiny small downhill and decrease f(\theta_0,\theta_1) at least a little bit. If gradient descent instead increases the objective value, that means alpha is too large (or you have a bug in your code!).
+YES If θ0 and θ1 are initialized at the global minimum, the one iteration will not change their values.	Correct	0.25	At the global minimum, the derivative (gradient) is zero, so gradient descent will not change the parameters.
+YES No matter how θ0 and θ1 are initialized, so long as α is sufficiently small, we can safely expect gradient descent to converge to the same solution.	Correct	0.25	This is not true, because depending on the initial condition, gradient descent may end up at different local optima.
+NO Even if the learning rate α is very large, every iteration of gradient descent will decrease the value of f(θ0,θ1).	Inorrect	0.00	If the learning rate α is too large, one step of gradient descent can actually vastly "overshoot", and actuall increase the value of f(θ0,θ1).
+YES If θ0 and θ1 are initialized so that θ0=θ1, then by symmetry (because we do simultaneous updates to the two parameters), after one iteration of gradient descent, we will still have θ0=θ1.	Inorrect	0.00	The updates to θ0 and θ1 are different (even though we're doing simultaneous updates), so there's no particular reason to expect them to be the same after one iteration of gradient descent.
+%-------------------------------------------------------------------------------------%
+
+Suppose that for some linear regression problem (say, predicting housing prices as in the lecture), we have some training set, and for our training set we 
+managed to find some $\theta_0$, $\theta_1$ such that $J(\theta_0, \theta_1)$=0. Which of the statements below must then be true? (Check all that apply.)
+
+Your Answer		Score	Explanation
+
+NO We can perfectly predict the value of y even for new examples that we have not yet seen. (e.g., we can perfectly predict prices of even new houses that we have not yet seen.)	Inorrect	0.00	Even though we can fit our training set perfectly, this does not mean that we'll always make perfect predictions on houses in the future/on houses that we have not yet seen.
+
+NO This is not possible: By the definition of J(θ0,θ1), it is not possible for there to exist θ0 and θ1 so that J(θ0,θ1)=0	Correct	0.25	If all of our training examples lie perfectly on a line, then J(θ0,θ1)=0 is possible.
+
+YES Our training set can be fit perfectly by a straight line, i.e., all of our training examples lie perfectly on some straight line.	Inorrect	0.00	If J(θ0,θ1)=0, that means the line defined by the equation "y=θ0+θ1x" perfectly fits all of our data.
+
+NO Gradient descent is likely to get stuck at a local minimum and fail to find the global minimum.	Inorrect	0.00	The cost function J(θ0,θ1) for linear regression has no local optima (other than the global minimum), so gradient descent will not get stuck at a bad local minimum.
+
+NO For this to be true, we must have y(i)=0 for every value of i=1,2,…,m.	Correct	0.25	So long as all of our training examples lie on a straight line, we will be able to find θ0 and θ1 so that J(θ0,θ1)=0. It is not necessary that y(i)=0 for all of our examples.
+NO For this to be true, we must have $\theta_0$=0 and $\theta_1$=0 so that $h_\theta$(x)=0	Correct	0.25	
+
+If $J(\theta_0, \theta_1)$=0, that means the line defined by the equation "y=$\theta_0$+$\theta_1$x" perfectly fits all of our data. 
+There's no particular reason to expect that the values of $\theta_0$ and $\theta_1$ that achieve this are both 0 (unless y(i)=0 for all of our training examples).
+
+NO This is not possible: By the definition of $J(\theta_0, \theta_1)$, it is not possible for there to exist $\theta_0$ and $\theta_1$ so that $J(\theta_0, \theta_1)$=0	
+   Correct	0.25	If all of our training examples lie perfectly on a line, then $J(\theta_0, \theta_1)$=0 is possible.
+
+YES Gradient descent is likely to get stuck at a local minimum and fail to find the global minimum.	
+   Incorrect	0.00	The cost function $J(\theta_0, \theta_1)$ for linear regression has no local optima (other than the global minimum), 
+   so gradient descent will not get stuck at a bad local minimum.
+
+NO Our training set can be fit perfectly by a straight line, i.e., all of our training examples lie perfectly on some straight line.	
+   Incorrect	0.00	
+   If $J(\theta_0, \theta_1)$=0, that means the line defined by the equation "y=$\theta_0$+$\theta_1$x" perfectly fits all
+   of our data.
+
+YES For these values of θ0 and θ1 that satisfy J(θ0,θ1)=0, we have that hθ(x(i))=y(i) for every training example (x(i),y(i))	Inorrect	0.00	J(θ0,θ1)=0, that means the line defined by the equation "y=θ0+θ1x" perfectly fits all of our data.
