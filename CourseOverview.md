@@ -1,3 +1,4 @@
+### Syllabus for Coursera ML course
 1. Introduction to Machine Learning. Univariate linear regression. (Optional: Linear algebra review.)
 2. Multivariate linear regression. Practical aspects of implementation. Octave tutorial.
 3. Logistic regression, One-vs-all classification, Regularization.
