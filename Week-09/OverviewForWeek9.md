@@ -1,4 +1,5 @@
-Week 9 - Recommender systems.
+Week 9 - Anomaly Detection & Recommender Systems
+===================================================================
 
 December 23 - December 30
 <!-------------------------------------------------------------->
@@ -15,7 +16,13 @@ Recommender Systems
 - Gradient with regularization
 
 <!-------------------------------------------------------------->
-Section 15 Anomaly Detection
+### Section 15 Anomaly Detection
 - gaussian distribution
 - multivariate gaussian distribution
-<!-------------------------------------------------------------->
+
+<hr>
+### Programming Assignment
+- estimateGaussian.m - Estimate the parameters of a Gaussian dis-
+tribution with a diagonal covariance matrix
+- selectThreshold.m - Find a threshold for anomaly detection
+- cofiCostFunc.m - Implement the cost function for collaborative fitering
