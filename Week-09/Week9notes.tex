@@ -1,0 +1,47 @@
+
+%------------------------------------------------%
+% ML Week 9
+
+\section{Recommender Systems}
+
+Information Filtering System that attempts to recommend information items likely
+to be of interest to a user.
+
+\textbf{Commonly used algorithms}
+\begin{itemize
+\item $k-$means clustering
+\item Pearson's Rho
+\item Collaborative Filtering
+\end{itemize}
+
+Collaborative Filtering is the process of filtering for information or patterns using collaboration among multiple
+agents.
+
+Applications: online news aggregation or similar items of clothings
+
+best approached by other methods - prediction
+
+Collaborative Filtering Gradient
+%NOT FINISHED
+
+\[ \frac{\partial J}{\partial X^{(i)}_k}  = \sum [  ] \theta^{(j)}_k \]
+\[ \frac{\partial J}{\partial \theta^{(i)}_k}  = \sum [  ] X^{(j)}_k \]
+
+No regularization applied
+
+%--------------------------------------%
+Anomaly Detection
+Gaussian Distribution
+Estimate Gaussian Distribution
+
+For $n$ feastures of $X$ , compute the mean and variance for each feature
+
+%-----------%
+Selecting Threshold of $\epsilon$.
+
+Implement an algorithm to select the threshold $\epsilon$ using an $F_i$ score on a 
+cross validation set.
+
+$P(X) < \epsilon$ is considered to be an anomaly.
+
+\subsection{$F_1$ Score}
