@@ -1,0 +1,39 @@
+%------------------------------------------------%
+
+%ML Week 8
+
+\subsection*{Finding Closest Centroids}
+
+In the cluste assignment phase of the algorithm, the algorithm assigns every training example $x^{(n)}$ to the closest 
+centroid, given the current position of the centroids.
+
+\[ C^{(i)} := J \mbox{ that minimizes } \| x^{} - \mu_j \| ^2 \]
+
+\begin{itemize}
+\item $C^{(i)}$ index of the centroid clostest to $x^{(i)}$
+\item $\mu_j$ is the position of the $j-$th centroid.
+\end{itemize}
+
+Computing Centroid Means
+
+\[ 
+\mu_k := \frac{1}{abs(C_k)} \sum_{i \in C_k} x^{(i)}
+\]
+%---------------%
+
+A good way to initialize k-mean is to select $k$ distinct examples from the training set and set the cluster centroids equal to these selected examples.
+
+On every iteration of $k-$means, the cost function $J(C^{(1)},C^{(2)},\ldots, C^{(n)},
+\mu_1,\ldots \mu_k)$
+
+The distortion function should either stay the same or decrease, in particular it should not increase.
+
+%---------------%
+Recommended Applications of PCA
+
+\begin{itemize}
+\item Data Compression: reducing the dimensionof input data $x^{(i)}$, which will be used in a supervised learning algorithm
+(i.e. use PCA data so that your supervised learning algorithm runs faster.
+
+\item Data Visualization: Reduce data to 2D ( or 3D) so that it can be plotted.
+\end{itemize}
