@@ -1,3 +1,17 @@
+Machine Learning Clustering
+
+Suppose you have an unlabelled set of observations$\{ x^{(1)},x^{(2)},x^{(3)},x^{(4)}, \ldots ,x^{(n)}\}$.
+You run $k-$means with 50 random initializations and obtain 50 different clusterings solution of the data.
+What is the recommended way of choosing which solution to use.
+
+The Distortion Function
+For each of the clustering solutions, the distortion function is computed as 
+\[ \frac{1}{m} \sum^{m}_{i=1} \parallel x^{(i)} - \mu_c^{(i)}\parallel ^2 \]
+The optimal clustering solution is the solution that minizes the distortion function.
+Since a lower value for a distortion function, implies a better clustering, you should choose the clustering with 
+smallest value of the distortion function.
+
+
 %------------------------------------------------%
 
 %ML Week 8
