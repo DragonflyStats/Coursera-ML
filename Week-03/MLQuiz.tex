@@ -1,0 +1,92 @@
+\documentclass[]{article}
+
+%opening
+\title{}
+\author{}
+
+\begin{document}
+
+\maketitle
+-0.47
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{}
+
+X1= c(89,72,94,69)
+X2= c(7921,5184,8836,4761)
+Y = c(96,74,87,78)
+
+
+
+The mean of x2 is 6675.5 and the range is 8836-4761=4075 So x(1)1 is 4761-6675.54075=-0.47.
+
+%---------------------------------------------------------------------------%
+\subsection*{Question 2}
+You run gradient descent for 15 iterations with $\alpha$=0.3 and compute J($\theta$) after each iteration. 
+You find that the value of J($\theta$) decreases quickly then levels off. Based on this, which of the following conclusions seems most plausible?
+Your Answer		Score	Explanationn
+\begin{itemize}
+\item Rather than use the current value of $\alpha$, it'd be more promising to try a larger value of $\alpha$ (say $\alpha$=1.0).
+\\ Incorrect	0.00	 A larger value for $\alpha$ will make it more likely that J($\theta$) diverges.
+\item Rather than use the current value of $\alpha$, it'd be more promising to try a smaller value of $\alpha$ (say $\alpha$=0.1).			
+\item $\alpha$=0.3 is an effective choice of learning rate.			
+\end{itemize}
+Total		0.00 / 1.00	
+
+ Rather than use the current value of a, it'd be more promising to try a smaller value of $\alpha$ (say $\alpha$=0.1).	Correct	1.00	 
+Since the cost function is increasing, we know that gradient descent is diverging, so we need a lower learning rate.
+%---------------------------------------------------------------------------%
+%---------------------------------------------------------------------------%
+\subsection*{Question 3}
+Suppose you have m=28 training examples with n=4 features (excluding the additional 
+all-ones feature for the intercept term, which you should add). The normal equation is $\theta$=(XTX)-1XTy. 
+For the given values of m and n, what are the dimensions of $\theta$, X, and y in this equation?
+
+\begin{itemize}
+\item X is 28×4, y is 28×1, $\theta$ is 4×4			
+\item X is 28×4, y is 28×1, $\theta$ is4×1			
+\item X is 28×5, y is 28×1, $\theta$ is 5×1	\textbf{Correct	1.0}	
+\item X is 28×5, y is 28×5, $\theta$ is 5×5
+\end{itemize}			
+Total		1.00 / 1.00	
+Question Explanation
+
+X has m rows and n+1 columns (+1 because of the x0=1 term). y is an m-vector. $\theta$ is an (n+1)-vector.
+%---------------------------------------------------------------------------%
+%---------------------------------------------------------------------------%
+\subsection*{Question 4}
+Suppose you have a dataset with m=50 examples and n=200000 features for each example. 
+You want to use multivariate linear regression to fit the parameters $\theta$ to our data. 
+Should you prefer gradient descent or the normal equation?
+
+\begin{itemize}
+\item Gradient descent, since ($X^TX)^{-1}$ will be very slow to compute in the normal equation.	
+\\ Correct
+		
+\item The normal equation, since it provides an efficient way to directly find the solution.			
+\item The normal equation, since gradient descent might be unable to find the optimal $\theta$.	
+\\Incorrect	0.00	 \\ For an appropriate choice of $\alpha$, gradient descent can always find the optimal $\theta$.
+\item Gradient descent, since it will always converge to the optimal $\theta$.			
+\end{itemize}	
+%---------------------------------------------------------------------------%
+%---------------------------------------------------------------------------%
+\subsection*{Question 5}
+Which of the following are reasons for using feature scaling?
+
+%--------------%
+FALSE It prevents the matrix XTX (used in the normal equation) from being non-invertable (singular/degenerate).	
+\\Correct	0.25	 XTX can be singular when features are redundant or there are too few examples. Feature scaling does not solve these problems.
+%--------------%
+FALSE It speeds up gradient descent by making it require fewer iterations to get to a good solution.	
+\\Correct	0.25	 Feature scaling speeds up gradient descent by avoiding many extra iterations that are required when one or more features take on much larger values than the rest.
+%--------------%
+TRUE It speeds up solving for $\theta$ using the normal equation.	
+\\Incorrect	0.00	 The magnitude of the feature values are insignificant in terms of computational cost.
+%--------------%
+FALSE It is necessary to prevent gradient descent from getting stuck in local optima.	
+\\Correct	0.25	 The cost function J($\theta$) for linear regression has no local optima.
+%--------------%	
+\end{document}
