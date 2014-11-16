@@ -1,0 +1,30 @@
+
+\documentclass[]{article}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{graphicx}
+\begin{document}
+
+
+
+
+\section*{Model Fitting}
+Which of the following statements are true? Check all that apply.
+\begin{itemize}
+\item[(i)] A model with more parameters is more prone to overfitting and typically has higher variance.	
+
+(TRUE) More model parameters increases the model's complexity, so it can more tightly fit data in training, increasing the chances of overfitting.
+%--------------------------------%
+\item[(ii)] If a neural network has much lower training error than test error, then adding more layers will help bring the test error down because we can fit the test set better.	
+
+(FALSE) With lower training than test error, the model has high variance. Adding more layers will increase model complexity, making the variance problem worse.
+%--------------------------------%
+\item[(iii)] If a learning algorithm is suffering from high bias, only adding more training examples may not improve the test error significantly.
+
+(TRUE) With high bias, the model is not fitting the training data currently present, so adding more data is unlikely to help.
+%--------------------------------%
+\item[(iv)] When debugging learning algorithms, it is useful to plot a learning curve to understand if there is a high bias or high variance problem.
+
+(TRUE) The shape of a learning curve is a good indicator of bias or variance problems with your learning algorithm.
+\end{itemize}
+\end{document}

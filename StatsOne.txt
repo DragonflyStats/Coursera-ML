@@ -1,0 +1,33 @@
+
+\subsection{Using Packages}
+
+\begin{itemize}
+\item \texttt{install.packages()}
+\item \texttt{library()}
+\end{itemize}
+
+Suppose we wish to use the \textbf{emph{caret}} package for some statistical analyses.
+As this package is not part of the base \texttt{R} installation, we must install it. 
+We use the \texttt{install.packages()} command to perform this operation. 
+
+(N.B. notice the use of the plural packages,as this function may be used for downloading several packages simultaneously,
+ and also the use of the quotation marks.)
+
+Some options will be presented to the user, in particular, the choice of CRAN mirror. 
+
+Simply select the mirror of the country you are in, or nearest too.
+
+Some packages require the last version of \texttt{R} to be installed. This problem is usually avoided
+by regularly updating your version of \texttt{R} on an ongoing basis.
+
+The package may be installed on your PC, but that does not mean that \texttt{R} may use that package.
+The package must be called using the \texttt{library()} command (this time not using quotation marks)
+
+\begin{framed}
+\begin{verbatim}
+install.packages("caret")
+library(caret)
+\end{verbatim}
+\end{framed}
+
+%-----------------------------------------------%

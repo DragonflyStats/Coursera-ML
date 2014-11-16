@@ -1,0 +1,92 @@
+Machine Learning
+Schedule:
+Week 1:
+
+Introduction
+Linear regression with one variable
+Linear Algebra review (Optional)
+Week 2:
+
+Linear regression with multiple variables
+Octave tutorial
+Programming Exercise 1: Linear Regression
+Week 3:
+
+Logistic regression
+Regularization
+Programming Exercise 2: Logistic Regression
+Week 4:
+
+Neural Networks: Representation
+Programming Exercise 3: Multi-class Classification and Neural Networks
+Week 5:
+
+Neural Networks: Learning
+Programming Exercise 4: Neural Networks Learning
+Week 6:
+
+Advice for applying machine learning
+Machine learning system design
+Programming Exercise 5: Regularized Linear Regression and Bias v.s. Variance
+Week 7:
+
+Support vector machines
+Programming Exercise 6: Support Vector Machines
+Week 8:
+
+Clustering
+Dimensionality reduction
+Programming Exercise 7: K-means Clustering and Principal Component Analysis
+Week 9:
+
+Anomaly Detection
+Recommender Systems
+Programming Exercise 8: Anomaly Detection and Recommender Systems
+Week 10:
+
+Large scale machine learning
+Application example: Photo OCR
+
+
+https://github.com/phyous/machine-learning-coursera/blob/master/lectures/Lecture11.pdf
+
+
+In taking this class you’ll build basic models for Regression, Neural Networks, Support 
+Vector Machines, Clustering, Recommendation Systems, and Anomaly Detection. 
+
+Octave  - Free version of MATLAB
+
+Matrix Multiplication v Element Wise Multiplication
+
+%------------------------------------------------------------%
+Octave: Maximum Values with Matrices (Exercise C.4) 
+
+Octave 
+Octave: Maximum Values with Matrices 
+http://youtu.be/b_2G1ouSEZ0
+
+%------------------------------------------------------------%
+Supervised v Unsupervised Learning
+
+F-scores Accuracy Precision and Recall
+
+
+11 - Spam Classification Example
+Error Analysis
+Precision and Recall
+
+
+%------------------------------------------------------------%
+
+Ex1
+
+https://skydrive.live.com/redir?resid=8060571A0FCD32D!175&authkey=!ALDz5RoDeKbkXaY
+
+Logistic Function 
+
+https://skydrive.live.com/redir?resid=8060571A0FCD32D!164
+
+Bias Variance TradeOFf
+
+https://skydrive.live.com/redir?resid=8060571A0FCD32D!170
+

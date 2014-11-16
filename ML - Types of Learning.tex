@@ -1,0 +1,100 @@
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+\usepackage{framed}
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+
+\title{Machine Learning }
+\author{Types of Learning}
+
+\begin{document}
+\section{What is Machine Learning?}
+\textbf{Machine Learning} is a class of algorithms which is data-driven, i.e. unlike "normal" algorithms it is the data that "tells" what the "good answer" is. 
+
+Example: an hypothetical non-machine learning algorithm for face recognition in images would try to define what a face is (round skin-like-colored disk, with dark area where you expect the eyes etc). 
+
+A machine learning algorithm would not have such coded definition, but will "learn-by-examples": you'll show several images of faces and not-faces and a good algorithm will eventually learn and be able to predict whether or not an unseen image is a face.
+
+This particular example of face recognition is supervised, which means that your examples must be labeled, or explicitly say which ones are faces and which ones aren't.
+
+In an unsupervised algorithm your examples are not labeled, i.e. you don't say anything. Of course in such a case the algorithm itself cannot "invent" what a face is, but it could be able to cluster the data in different class, e.g. it could be able to distinguish that faces are very different from panoramas, which are very different from horses.
+
+%-------------------------------------------------------------------------------------------------------%
+\section{Types of Learning}
+\begin{itemize}
+\item Supervised Learning
+\item Unsupervised Learning
+\item Reinforcement Learning
+\end{itemize}
+%-------------------------------------------------------------------------------------------------------%
+\subsection{Supervised Learning}
+
+\begin{itemize}
+\item Supervised learning is the machine learning task of inferring a function from labeled training data. The training data consist of a set of \textbf{training examples}. 
+\item In supervised learning, each example is a pair consisting of an input object (typically a vector) and a desired output value (also called the supervisory signal). \item A supervised learning algorithm analyzes the training data and produces an inferred function, which can be used for mapping new examples.
+\end{itemize}
+%-------------------------------------------------------------------------------------------------------%
+\subsection{Supervised Learning vs Unsupervised Learning}
+\begin{itemize}
+\item Supervised learning is when the data you feed your algorithm is labelled to help decision making.
+\item \textbf{Example:} Bayes spam filtering, where you have to flag an item as spam to refine the results.
+\item Unsupervised learning are types of algorithms that try to find correlations without any external inputs other than the raw data.
+\item \textbf{Example:} Clustering algorithms
+\end{itemize}
+%-------------------------------------------------------------------------------------------------------%
+\newpage
+
+\subsection{Reinforcement Learning}
+\emph{(Florentin Woergoetter and Bernd Porr (2008) Reinforcement learning. Scholarpedia, 3(3):1448.)}
+
+\begin{itemize}
+\item Reinforcement learning (RL) is learning by interacting with an environment. An RL agent learns from the consequences of its actions, rather than from being explicitly taught and it selects its actions on basis of its past experiences (exploitation) and also by new choices (exploration), which is essentially \textbf{trial and error} learning. \emph{(Source: Scholarpedia)}
+\item The reinforcement signal that the RL-agent receives is a numerical reward, which encodes the success of an action's outcome, and the agent seeks to learn to select actions that maximize the accumulated reward over time. \emph{(Source: Scholarpedia )}
+
+\item Reinforcement learning is an area of machine learning in computer science, concerned with how software agents ought to take actions in an environment so as to maximize some notion of cumulative reward. 
+\item Reinforcement learning differs from standard supervised learning in that correct input/output pairs are never presented, nor sub-optimal actions explicitly corrected. Further, there is a focus on on-line performance, which involves finding a balance between exploration (of uncharted territory) and exploitation (of current knowledge). 
+\end{itemize}
+%---------------------------------------------------------------------------------%
+
+\newpage
+\section{Overfitting}
+\begin{itemize}
+\item Overfitting occurs when a statistical model describes random error or noise instead of the underlying relationship. \item Overfitting generally occurs when a model is excessively complex, such as having too many parameters relative to the number of observations. \item A model which has been overfit will generally have poor predictive performance, as it can exaggerate minor fluctuations in the data.
+\end{itemize}
+%----------------------------------------------------------------------------------%
+\end{document}

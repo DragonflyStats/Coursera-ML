@@ -1,0 +1,20 @@
+\documentclass[]{article}
+
+\begin{document}
+
+
+
+\section*{Anomaly Detection}
+
+For which of the following problems would anomaly detection be a suitable algorithm?
+\begin{itemize}
+\item[(i)]
+Given an image of a face, determine whether or not it is the face of a particular famous individual.\\	\textbf{Conclusion} This problem is more suited to traditional supervised learning, as you want both famous and non-famous images in the training set.
+\item[(ii)]
+In a computer chip fabrication plant, identify microchips that might be defective.	\\	\textbf{Conclusion} 	The defective chips are the anomalies you are looking for by modeling the properties of non-defective chips.
+\item[(iii)]
+Given a dataset of credit card transactions, identify unusual transactions to flag them as possibly fraudulent.	\\	\textbf{Conclusion} By modeling "normal" credit card transactions, you can then use anomaly detection to flag the unusuals ones which might be fraudulent.
+\item[(iv)]
+From a large set of hospital patient records, predict which patients have a particular disease (say, the flu).\\	\textbf{Conclusion} Anomaly detection would not be appropriaate, as you want to train on both types of patient records rather than modeling one as "normal."
+\end{itemize}
+\end{document}

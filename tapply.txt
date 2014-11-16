@@ -1,0 +1,166 @@
+\subsection{A Quick remark about Logic Values}
+Why use TRUE/FALSE and not T/F in \texttt{R} programming?
+\begin{verbatim}
+> # Why use TRUE/FALSE and not T/F in #RStats?
+> x<-1:2
+> x[c(T,F)]
+[1] 1
+> F<-TRUE
+> x[c(T,F)]
+[1] 1 2
+\end{verbatim}
+
+X <- rnorm(100,mean=100,sd=15)
+
+Grp1 <- gl(4,10,labels=c("A","B","C","D"))
+Grp2 <- gl(4,1,40,labels=c("W","X","Y","Z"))
+
+\begin{verbatim}
+> Grp1 <- gl(4,10,labels=c("A","B","C","D"))
+> Grp2 <- gl(4,1,40,labels=c("W","X","Y","Z"))
+>
+> Grp1
+ [1] A A A A A A A A A A B B B B B B B B B B C C C C C C C
+[28] C C C D D D D D D D D D D
+Levels: A B C D
+> Grp2
+ [1] W X Y Z W X Y Z W X Y Z W X Y Z W X Y Z W X Y Z W X Y
+[28] Z W X Y Z W X Y Z W X Y Z
+Levels: W X Y Z
+>
+> table(Grp1,Grp2)
+    Grp2
+Grp1 W X Y Z
+   A 3 3 2 2
+   B 2 2 3 3
+   C 3 3 2 2
+   D 2 2 3 3
+> 
+\end{verbatim}
+
+
+\begin{framed}
+\begin{verbatim}
+
+X <- rnorm(100,mean=100,sd=10)
+GrpA <- gl(4,25,labels=c("A","B","C","D"))
+GrpB <- gl(4,1,100,labels=c("W","X","Y","Z"))
+
+DF <- data.frame(Score=X,GrpA=GrpA,GrpB=GrpB)
+
+attach(DF)
+aggregate(Score,by=list(GrpA,GrpB),mean)
+\end{verbatim}
+\end{framed}
+
+
+%------------------------------------------------------------------%
+\subsection{Correlation with Missing Values}
+To compute the correlation coefficient, the command is simply \texttt{cor()}, specifying the name of the variables.
+
+\begin{verbatim}
+>  # mtcars data set is attached
+>  # attach(mtcars)
+> cor(hp,wt)
+[1] 0.6587479
+\end{verbatim}
+Importantly there are no missing values in the mtcars data set. Suppose you are trying to compute the correlation
+coefficient when some values are missing. Running the function would result in an "NA" value (see code below).
+
+If the argument \texttt{use} has the value "pairwise.complete.obs" then the correlation or 
+covariance between each pair of variables is computed using all \textbf{complete} pairs 
+of observations on those variables. 
+
+
+\begin{framed}
+\begin{verbatim}
+attach(airquality)
+
+cor(Ozone,Wind) # NA as answer
+cor(Ozone,Wind,use = "pairwise.complete.obs")
+cor(Ozone,Wind,use = "complete.obs")
+
+detach(airquality)
+\end{verbatim}
+\end{framed}
+
+\begin{verbatim}
+> cor(Ozone,Wind) # NA as answer
+[1] NA
+> cor(Ozone,Wind,use = "pairwise.complete.obs")
+[1] -0.6015465
+> cor(Ozone,Wind,use = "complete.obs")
+[1] -0.6015465
+
+\end{verbatim}
+
+
+%------------------------------------%
+\subsection{Simple Frequency Tables}
+\begin{verbatim}
+> attach(mtcars)
+> table(vs)
+vs
+ 0  1 
+18 14
+> 
+> table(vs,am)
+   am
+vs   0  1
+  0 12  6
+  1  7  7
+\end{verbatim}
+%------------------------------------%
+\begin{framed}
+\begin{verbatim}
+#attach the mtcars data set
+#save a lot of typing.
+
+attach(mtcars)
+tapply(hp,cyl,mean)
+\end{verbatim}
+\end{framed}
+
+
+\begin{framed}
+\begin{verbatim}
+> attach(mtcars)
+> tapply(hp,cyl,mean)
+        4         6         8 
+ 82.63636 122.28571 209.21429 
+
+\end{verbatim}
+\end{framed}
+
+The mean horsepower for 4 cylinder cars is 82.64cc.
+The mean horsepower for 6 cylinder cars is 122.29cc.
+
+
+
+%---------------------------------------%
+The levels of the \textbf{am} are 0 (i.e automatic) and 1 (i.e. manual)
+
+\begin{framed}
+\begin{verbatim}
+tapply(hp,list(cyl,am),mean)
+\end{verbatim}
+\end{framed}
+
+\begin{verbatim}
+> tapply(hp,list(cyl,am),mean)
+          0        1
+4  84.66667  81.8750
+6 115.25000 131.6667
+8 194.16667 299.5000
+\end{verbatim}
+
+Grouping by more than one categorical variable.
+\begin{verbatim}
+> tapply(hp,list(VS=vs,AM=am),sd)
+   AM
+VS         0        1
+  0 33.35984 98.81582
+  1 20.93186 24.14441
+\end{verbatim}
+%----------------------------------------%
+%---------------------------------------%
