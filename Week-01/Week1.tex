@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+
+%opening
+\title{Coursera - Machine Learning}
+\author{www.Stats-Lab.com}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Machine Learning - Overview}
+
+\begin{enumerate}
+\item Introduction to Machine Learning. Univariate linear regression. (Optional: Linear algebra review.)
+\item Multivariate linear regression. Practical aspects of implementation. Octave tutorial.
+\item Logistic regression, One-vs-all, Regularization.
+\item Neural Networks, backpropagation, gradient checking.
+\item Support Vector Machines (SVMs) and intuitions. Quick survey of other algorithms: Naive Bayes, Decision trees, Boosting.
+\item Practical advice for applying learning algorithms: How to develop, debugging, feature/model design, setting up experiment structure.
+\item Unsupervised learning: Agglomerative clustering, K-means, PCA, when to use each. (Optional/extra credit: ICA).
+\item Anomaly detection. Combining supervised and unsupervised.
+\item Other applications: Recommender systems. Learning to rank (search).
+\item Large-scale/parallel machine learning and big data. ML system design/practical methods. Team design of ML systems.
+\end{enumerate}
+\section{Machine Learning Week 1}
+\subsection{Definition of Machine Learning}
+
+\begin{itemize}
+\item Arthur Samuel(1959). Machine Learning:\\
+\textit{Field of study that gives computers the ability to learn without being explicitly programmed.}
+
+\item Tom Mitchell(1998) Well-posed Learning Problem: \\
+
+\textit{A computer program is said to learn from \textbf{experience E} with respect to some \textbf{task T} and some \textbf{performance measure P}, if its performance on T, as measured by P, improves with 
+experience E.}
+\end{itemize}
+
+
+
+\subsection{Classification and Regression}
+
+\begin{description}
+\item[Classification]:  
+predicts categorical class labels (discrete or nominal) and
+classifies data (constructs a model) based on the training set and the values (class labels) in a classifying attribute and uses it in classifying new data
+\item[Regression]:  
+models continuous-valued functions
+\end{description}
+\newpage
+\subsection{Gradient Descent Algorithm}
+
+\begin{itemize}
+\item Gradient descent is a first-order optimization algorithm. To find a local minimum of a function using gradient descent, one takes steps proportional to the negative of the gradient (or of the approximate gradient) of the function at the current point.\item  If instead one takes steps proportional to the positive of the gradient, one approaches a local maximum of that function; the procedure is then known as gradient ascent.
+\item Gradient descent is also known as steepest descent, or the method of steepest descent. \item When known as the latter, gradient descent should not be confused with the method of steepest descent for approximating integrals.
+\end{itemize}
+
+\subsection{Support Vector Machines (SVMs)}
+\begin{itemize}
+ 
+\item This method performs regression and classification tasks by constructing nonlinear decision boundaries. \item Because of the nature of the feature space in which these boundaries are found, Support Vector Machines can exhibit a large degree of flexibility in handling classification and regression tasks of varied complexities. \item There are several types of Support Vector models including linear, polynomial, RBF, and sigmoid.
+
+\end{itemize}
+\end{document}
