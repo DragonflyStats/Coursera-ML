@@ -1,0 +1,51 @@
+Machine Learning Course - Support Vector Machines
+Week 7
+%======================================================================%
+
+
+Performance on a cross-validation set, indicates poor performance due to underfitting
+
+\begin{itemize}
+\item It is reasonable to increase C, increasing C lowers the bias and increases the variance.
+\item Similarly decreasing $\sigma^2$ would lower the bias and increase the variance.
+\end{itemize}
+When there is poor performance due to overfitting - decrease C and increase $\sigma^2$.
+
+%=====================================================================%
+
+The SVM solves
+\[
+\sum^{M}_{i=1} y^{(i)} cos\,t_i (\theta^t x^{(i)}) + (1 - y^{(i)}) cos\,t_0 (\theta^t x^{(i)})+ \sum^{N}_{i=1} \theta^2_{(i)}
+\]
+
+The cost functions $\mbox{cost}_0(Z)$ and $\mbox{cost}_1(Z)$
+
+The first term in this function will be under zero under the following conditions
+
+\begin{itemize}
+\item for every example with  $y^{(i)} = 0$ with $(\theta^t x^{(i)}) \leq  - 1$
+\item for every example with  $y^{(i)} = 1$ with $(\theta^t x^{(i)}) \geq  1$
+\end{itemize}
+%=====================================================================%
+
+It is important to perform feature normalization before using the Gaussian kernel.
+
+The maximum value of a Gaussian kernel is 1.
+
+\[ \mbox{Max} [ \mbox{sim}(x, L^{(i)}) ] = 1 \] 
+
+%=====================================================================%
+Suppose we have a data set with $n=10$ features and $m=5000$ examples.
+
+After training your logistic function regression classifier with gradient descent, you find that it has underfit the training
+set and does not achieve the desired performance on the training or cross-validation sets.
+
+Taking the following steps
+
+
+Creating and add new polynomial features. When you add more features, you increase the variance of your model, reducing
+the chance of underfitting.
+
+Try a large neural network with a large number of hidden units.
+
+A neural network is a more complex (i.e. higher variance) model compared to  logisitc regression, so it is less likely to underfit the data.
