@@ -37,7 +37,7 @@ When θ0=0 and θ1=1, we have hθ(x)=θ0+θ1x=x. So, J(θ0,θ1)=12m∑i=1m(hθ(x
 
 %--------------------------------------------------------------------------------------------------------------------------%
 #### Question 3
-Suppose we set θ0=0, θ1=1.5. What is $h(\theta)_{(2)}?
+Suppose we set θ0=0, θ1=1.5. What is $h(\theta)_{(2)}$?
 
 Answer for Question 3
 You entered:
@@ -50,7 +50,9 @@ Question Explanation
 Setting x=2, we have hθ(x)=θ0+θ1x=0+1.5∗2=3
 %--------------------------------------------------------------------------------------------------------------------------%
 #### Question 4
-Let f be some function so that f(θ0,θ1) outputs a number. For this problem, f is some arbitrary/unknown smooth function (not necessarily the cost function of linear regression, so f may have local optima). Suppose we use gradient descent to try to minimize f(θ0,θ1) as a function of θ0 and θ1. Which of the following statements are true? (Check all that apply.)
+Let f be some function so that f(θ0,θ1) outputs a number. For this problem, f is some arbitrary/unknown smooth function (not necessarily the cost function of linear regression, so f may have local optima). 
+
+Suppose we use gradient descent to try to minimize f(θ0,θ1) as a function of θ0 and θ1. Which of the following statements are true? (Check all that apply.)
 
 Your Answer		Score	Explanation
 No matter how θ0 and θ1 are initialized, so long as α is sufficiently small, we can safely expect gradient descent to converge to the same solution.	Correct	0.25	This is not true, because depending on the initial condition, gradient descent may end up at different local optima.
@@ -71,5 +73,7 @@ For this to be true, we must have θ0=0 and θ1=0 so that hθ(x)=0	Correct	0.25	
 This is not possible: By the definition of J(θ0,θ1), it is not possible for there to exist θ0 and θ1 so that J(θ0,θ1)=0	Correct	0.25	If all of our training examples lie perfectly on a line, then J(θ0,θ1)=0 is possible.
 
 Gradient descent is likely to get stuck at a local minimum and fail to find the global minimum.	Inorrect	0.00	The cost function J(θ0,θ1) for linear regression has no local optima (other than the global minimum), so gradient descent will not get stuck at a bad local minimum.
+
 Our training set can be fit perfectly by a straight line, i.e., all of our training examples lie perfectly on some straight line.	Inorrect	0.00	If J(θ0,θ1)=0, that means the line defined by the equation "y=θ0+θ1x" perfectly fits all of our data.
+
 Total		0.50 / 1.00	
