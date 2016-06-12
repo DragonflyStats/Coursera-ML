@@ -1,23 +1,27 @@
 Overview for Week 2
+================================================
 
 November 4 - November 11
 Linear Regression with Multiple Variables
 Octave Tutorial
 
 
-Programming Exercise 1 :Linear regression
+Programming Exercise 1 : Linear regression
 
 -------------------------------------------------------
-Section II (Linear Regression with One Variable )
+### Section II (Linear Regression with One Variable )
+
 linear regression, pay attention to the single variate case
 
 loss function also known as a "cost function"
 gradient descent
 additional concepts mentioned but not discussed in detail include:
-convex functions
-convex optimization
---------------------------------------------------------
+- convex functions
+- convex optimization
 
+--------------------------------------------------------
+#### Loss Function
 A loss function or cost function is a function that maps the outcome of a decision to a real-valued cost associated with that outcome. Loss functions are common in machine learning, information theory, statistics, and mathematical optimization, and help guide decision making under uncertainty.
 
+#### Gradient Descent
 Gradient descent, also known as steepest descent, is an iterative optimization algorithm for finding a local minimum of differentiable functions. At each iteration, gradient descent operates by moving the current solution in the direction of the negative gradient of the function (the direction of "steepest descent").
