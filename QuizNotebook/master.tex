@@ -1,0 +1,135 @@
+\section{Week 4 Neural Networks: Representation}
+
+
+Topics: Neural Networks: Representation
+
+Programming Exercise 3 : Multi-class classification and neural networks.
+
+%=================================================================%
+
+\section{ML Week 5}
+\subsection*{Overfitting and Regularization}
+
+\begin{itemize}
+\item If one neural network overfits the training set, one reasonable step is to
+increase the regularization parameter $\lambda$.
+\item For computational efficiency, after we performed gradient checking to verify that our back-propagation 
+code is correct, we usually disable gradient checkking before using back-propagation to train
+the network
+\end{itemize}
+%--------------------------%
+
+\subsection*{Exercise}
+Let $ J(\theta) = 3\theta^2 + 2$
+
+Let $\theta = 1$ and $\epsilon = 0.01$
+
+Use the formula to numerically compute an approximation to the derivative of $\theta$
+at $theta = 1$
+
+\[
+\frac{J(\theta + \epsilon) - J(\theta + \epsilon)}{2\epsilon} 
+= \frac{(3(1.01)^2 + 2$)-(3(0.99)^2 + 2$)}{0.002} 
+= 9.003
+
+\]
+%=================================================================%
+\newpage
+\section{Unsupervised Learning}
+%=================================================================%
+\subsection*{Question 1. }
+For which of the following tasks might K-means clustering be a suitable algorithm? Select all that apply.
+
+
+%=================================================================%
+\subsection*{Question 2.} 
+Suppose we have three cluster centroids $\mu_1$=$[1 2]^T$, $\mu_2$=$[−3 0]^T$ and $\mu_3$=$[4 2]^T$. 
+Furthermore, we have a training example x(i)=$[3 1]^T$. After a cluster assignment step, what will $c^{(i)}$ be?
+
+
+%=================================================================%
+\subsection*{Question 3.}
+K-means is an iterative algorithm, and two of the following steps are repeatedly carried out in its inner-loop. Which two?
+
+
+%=================================================================%
+\subsection*{Question 4. }
+Suppose you have an unlabeled dataset $\{x(1),\ldots,x(m)\}$. You run K-means with 50 different random
+
+initializations, and obtain 50 different clusterings of the data. 
+
+What is the recommended way for choosing which one of
+
+these 50 clusterings to use?
+
+%=================================================================%
+\subsection*{Question 5. }
+Which of the following statements are true? Select all that apply.
+
+
+%=================================================================%
+%------------------------------------------------%
+\newpage
+\section{ML Week 8 : Machine Learning Clustering}
+
+Suppose you have an unlabelled set of observations$\{ x^{(1)},x^{(2)},x^{(3)},x^{(4)}, \ldots ,x^{(n)}\}$.
+You run $k-$means with 50 random initializations and obtain 50 different clusterings solution of the data.
+What is the recommended way of choosing which solution to use.
+
+\subsection{The Distortion Function}
+For each of the clustering solutions, the distortion function is computed as 
+\[ \frac{1}{m} \sum^{m}_{i=1} \parallel x^{(i)} - \mu_c^{(i)}\parallel ^2 \]
+The optimal clustering solution is the solution that minizes the distortion function.
+Since a lower value for a distortion function, implies a better clustering, you should choose the clustering with 
+smallest value of the distortion function.
+
+
+
+
+\subsection*{Finding Closest Centroids}
+
+In the cluste assignment phase of the algorithm, the algorithm assigns every training example $x^{(n)}$ to the closest 
+centroid, given the current position of the centroids.
+
+\[ C^{(i)} := J \mbox{ that minimizes } \| x^{} - \mu_j \| ^2 \]
+
+\begin{itemize}
+\item $C^{(i)}$ index of the centroid clostest to $x^{(i)}$
+\item $\mu_j$ is the position of the $j-$th centroid.
+\end{itemize}
+
+%---------------%
+\subsection{Computing Centroid Means}
+
+\[ 
+\mu_k := \frac{1}{abs(C_k)} \sum_{i \in C_k} x^{(i)}
+\]
+%---------------%
+
+A good way to initialize k-mean is to select $k$ distinct examples from the training set and set the cluster centroids equal to these selected examples.
+
+On every iteration of $k-$means, the cost function $J(C^{(1)},C^{(2)},\ldots, C^{(n)},
+\mu_1,\ldots \mu_k)$
+
+The distortion function should either stay the same or decrease, in particular it should not increase.
+
+%---------------%
+\subsection{Recommended Applications of PCA}
+
+\begin{itemize}
+\item Data Compression: reducing the dimensionof input data $x^{(i)}$, which will be used in a supervised learning algorithm
+(i.e. use PCA data so that your supervised learning algorithm runs faster.
+
+\item Data Visualization: Reduce data to 2D ( or 3D) so that it can be plotted.
+\end{itemize}
+
+
+\section*{ML Week 10 Large Scale Machine Learning}
+
+\subsection*{Stochastic Gradient Checking}
+
+\begin{itemize}
+\item In each iteration of the stochastic gradient, the algorithm needs to examine/use only one training example.
+\item Each iteration updates the parameters based on the cost of only one example $ Cost (\theta,(x^{(i)},y^{(i)}))$.
+\item You can use numerical gradient checking to verify if your stochastic gradient descent implementation is bug-free.
+\end{itemize}
