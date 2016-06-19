@@ -152,6 +152,84 @@ The distortion function should either stay the same or decrease, in particular i
 \item Data Visualization: Reduce data to 2D ( or 3D) so that it can be plotted.
 \end{itemize}
 
+\section{Principal Component Analysis}
+
+
+\subsection{ Question 1. }
+
+Consider the following 2D dataset:
+
+
+Which of the following figures correspond to possible values that PCA may return for u(1) (the first eigenvector / first principal component)? 
+Check all that apply (you may have to check more than one figure).
+
+(Select both parallel vectors - Wrong)
+
+
+
+
+
+
+
+%====================================================================%
+
+\subsection{ Question 2. }
+Which of the following is a reasonable way to select the number of principal components k?
+
+(Recall that n is the dimensionality of the input data and m is the number of input examples.)
+
+\begin{itemize}
+\item Choose the value of k that minimizes the approximation error 1m∑mi=1||x(i)−x(i)approx||2.
+
+\item Choose k to be the smallest value so that at least 1% of the variance is retained.
+
+\item Choose k to be 99% of n (i.e., k=0.99∗n, rounded to the nearest integer).
+
+\item Choose k to be the smallest value so that at least 99% of the variance is retained. [CORRECT - Selected]
+
+\end{itemize}
+%====================================================================%
+\subsection{ Question 3. }
+Suppose someone tells you that they ran PCA in such a way that "95% of the variance was retained." What is an equivalent statement to this?
+
+1m∑mi=1||x(i)−x(i)approx||21m∑mi=1||x(i)||2≥0.95 [INCORRECT Selected]
+
+1m∑mi=1||x(i)−x(i)approx||21m∑mi=1||x(i)||2≤0.05
+
+1m∑mi=1||x(i)||21m∑mi=1||x(i)−x(i)approx||2≥0.95
+
+1m∑mi=1||x(i)−x(i)approx||21m∑mi=1||x(i)||2≥0.05
+
+%====================================================================%
+\subsection{ Question 4. }
+Which of the following statements are true? Check all that apply.
+
+\begin{itemize}
+\item Given an input x∈Rn, PCA compresses it to a lower-dimensional vector z∈Rk.
+
+\item PCA can be used only to reduce the dimensionality of data by 1 (such as 3D to 2D, or 2D to 1D).
+
+\item If the input features are on very different scales, it is a good idea to perform feature scaling before applying PCA.
+
+\item Feature scaling is not useful for PCA, since the eigenvector calculation (such as using Octave's svd(Sigma) routine) takes care of this automatically.
+\end{itemize}
+%====================================================================%
+\subsection{ Question 5. }
+Which of the following are recommended applications of PCA? Select all that apply.
+
+\begin{itemize}
+\item [CORRECT] Data compression: Reduce the dimension of your data, so that it takes up less memory / disk space.
+
+\item [CORRECT] Data compression: Reduce the dimension of your input data x(i), which will be used in a supervised learning algorithm (i.e., use PCA so that your supervised learning algorithm runs faster).
+
+\item As a replacement for (or alternative to) linear regression: For most learning applications, PCA and linear regression give substantially similar results.
+
+\item Data visualization: To take 2D data, and find a different way of plotting it in 2D (using k=2).
+
+\end{itemize}
+%====================================================================%
+
+
 
 \section*{ML Week 10 Large Scale Machine Learning}
 
