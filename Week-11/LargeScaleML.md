@@ -4,7 +4,7 @@ Machine learning works best when there is an abundance of data to leverage for t
 
 #### Gradient Descent with Large Datasets
 
-- Learning With Large Datasets6 min
-- Stochastic Gradient Descent13 min
-- Mini-Batch Gradient Descent6 min
-- Stochastic Gradient Descent Convergence12 min
+- Learning With Large Datasets
+- Stochastic Gradient Descent
+- Mini-Batch Gradient Descent
+- Stochastic Gradient Descent Convergence
