@@ -1,0 +1,73 @@
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+\usepackage{framed}
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+\usepackage{framed}
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+\begin{document}
+
+
+\section*{ML Week 10 Large Scale Machine Learning}
+
+\subsection*{Stochastic Gradient Checking}
+
+\begin{itemize}
+	\item In each iteration of the stochastic gradient, the algorithm needs to examine/use only one training example.
+	\item Each iteration updates the parameters based on the cost of only one example $ Cost (\theta,(x^{(i)},y^{(i)}))$.
+	\item You can use numerical gradient checking to verify if your stochastic gradient descent implementation is bug-free.
+\end{itemize}
+\section*{Machine Learning System Design}
+
+Suppose a massive dataset is available for training a learning algorithm. Training on a lot of data is likely to give good performance when two of the following conditions hold true. Which are the two?
+\begin{itemize}
+	\item[(i)] We train a learning algorithm with a small number of parameters (that is thus unlikely to overfit).	
+	
+	\textbf{No} - If the model has a small number of parameters, then it will underfit the large training set and not make good use of all the data.
+	%------------------------%
+	\item[(ii)] We train a learning algorithm with a large number of parameters (that is able to learn/represent fairly complex functions).	
+	
+	\textbf{Yes} - You should use a "\textit{\textbf{low bias}}" algorithm with many parameters, as it will be able to make use of the large dataset provided. If the model has too few parameters, it will underfit the large training set.
+	%------------------------%
+	\item[(iii)] The features x contain sufficient information to predict y accurately. (For example, one way to verify this is if a human expert on the domain can confidently predict y when given only x).	
+	
+	\textbf{Yes} - It is important that the features contain sufficient information, as otherwise no amount of data can solve a learning problem in which the features do not contain enough information to make an accurate prediction.
+	%------------------------%
+	\item[(iv)]When we are willing to include high order polynomial features of x (such as $x^2_1$, $x^2_2$, $x_1x_2$, etc.).	
+	
+	\textbf{No} - As we saw with neural networks, polynomial features can still be insufficient to capture the complexity of the data, especially if the features are very high-dimensional. Instead, you should use a complex model with many parameters to fit to the large training set.
+	
+\end{itemize}
