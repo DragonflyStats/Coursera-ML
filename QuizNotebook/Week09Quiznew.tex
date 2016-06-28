@@ -205,7 +205,7 @@ Suppose you run a bookstore, and have ratings (1 to 5 stars)
 
 of books. Your collaborative filtering algorithm has learned
 
-a parameter vector \theta(j) for user j, and a feature
+a parameter vector $\theta(j)$ for user j, and a feature
 
 vector $ \times $(i) for each book. You would like to compute the
 
@@ -217,18 +217,19 @@ from your users. Which of these are correct ways of doing so (check all that app
 
 For this problem, let m be the total number of ratings you
 
-have gotten from your users. (Another way of saying this is
-
-that m=∑nmi=1∑nuj=1r(i,j)). [Hint: Two of the four options below are correct.]
-
-
-1m∑(i,j):r(i,j)=1((\theta(j))T$ \times $(i)−r(i,j))2 SELECTED
-
-1m∑(i,j):r(i,j)=1((\theta(j))T$ \times $(i)−y(i,j))2
-
-1m∑nmi=1∑j:r(i,j)=1(∑nk=1(\theta(j))k$ \times $(i)k−y(i,j))2 SELECTED
-
-1m∑nuj=1∑i:r(i,j)=1(∑nk=1(\theta(k))j$ \times $(k)i−y(i,j))2
+have gotten from your users. 
+% (Another way of saying this is
+%
+%that m=∑nmi=1∑nuj=1r(i,j)). [Hint: Two of the four options below are correct.]
+%
+%
+%1m∑(i,j):r(i,j)=1((\theta(j))T$ \times $(i)−r(i,j))2 SELECTED
+%
+%1m∑(i,j):r(i,j)=1((\theta(j))T$ \times $(i)−y(i,j))2
+%
+%1m∑nmi=1∑j:r(i,j)=1(∑nk=1(\theta(j))k$ \times $(i)k−y(i,j))2 SELECTED
+%
+%1m∑nuj=1∑i:r(i,j)=1(∑nk=1(\theta(k))j$ \times $(k)i−y(i,j))2
 
 %=====================================================================%
 

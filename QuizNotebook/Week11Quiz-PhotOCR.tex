@@ -1,25 +1,65 @@
-Close
-Application: Photo OCR
 
-5 questions
-1
-point
-1. 
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+\usepackage{framed}
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+\usepackage{framed}
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+\begin{document}
+
+
+\section{ Machine Learning Application: Photo OCR}
+
+
+\subsection*{Question  1.}
 Suppose you are running a sliding window detector to find
 
-text in images. Your input images are 1000x1000 pixels. You
+text in images. Your input images are $1000 \times 1000$ pixels. You
 
-will run your sliding windows detector at two scales, 10x10
+will run your sliding windows detector at two scales, $10 \times 10$
 
-and 20x20 (i.e., you will run your classifier on lots of 10x10
+and $20 \times 20$ (i.e., you will run your classifier on lots of  $10 \times 10$
 
 patches to decide if they contain text or not; and also on
 
-lots of 20x20 patches), and you will "step" your detector by 2
+lots of $20 \times 20$ patches), and you will "step" your detector by 2
 
 pixels each time. About how many times will you end up
 
-running your classifier on a single 1000x1000 test set image?
+running your classifier on a single $1000 \times 1000$ test set image?
 
 CORRECT 500,000
 
@@ -30,7 +70,7 @@ CORRECT 500,000
 100,000
 
 %===================================================================%
-2. 
+\subsection*{Question  2. }
 Suppose that you just joined a product team that has been
 
 developing a machine learning application, using m=1,000
@@ -40,22 +80,22 @@ hiring additional personnel to help collect and label data.
 
 You estimate that you would have to pay each of the labellers
 
-$10 per hour, and that each labeller can label 4 examples per
+\$10 per hour, and that each labeller can label 4 examples per
 
 minute. About how much will it cost to hire labellers to
 
 label 10,000 new training examples?
 
-$10,000
+\$10,000
 
-$250
+\$250
 
-$600
+\$600
 
-CORRECT $400
+CORRECT \$400
 
 %===================================================================%
-3. 
+\subsection*{Question  3. }
 What are the benefits of performing a ceiling analysis? Check all that apply.
 
 CORRECT It can help indicate that certain components of a system might not be worth a significant amount of work improving, because even if it had perfect performance its impact on the overall system may be small.
@@ -67,7 +107,7 @@ CORRECT It helps us decide on allocation of resources in terms of which componen
 It is a way of providing additional training data to the algorithm.
 
 %===================================================================%
-4. 
+\subsection*{Question  4. }
 Suppose you are building an object classifier, that takes as input an image, and recognizes that image as either containing a car (y=1) or not (y=0). For example, here are a positive example and a negative example:
 
 
@@ -83,7 +123,7 @@ Take a training example and set a random subset of its pixel to 0 to generate a 
 Select two car images and average them to make a third example.
 
 %===================================================================%
-5. 
+\subsection*{Question  5. }
 Suppose you have a PhotoOCR system, where you have the following pipeline:
 
 
@@ -97,11 +137,11 @@ SELECTED There is a large gain in performance possible in improving the characte
 
 Performing the ceiling analysis shown here requires that we have ground-truth labels for the text detection, character segmentation and the character recognition systems.
 
-WRONG The least promising component to work on is the character recognition system, since it is already obtaining 100% accuracy.
-\textit{The character recogntion component is th emost poromsing, as ground truth character recogntion  impresoves performance by 18% over feeding the currenct charcter recongition sysystenm ground truth character segmentation.}
-}
-SELECTED The most promising component to work on is the text detection system, since it has the lowest performance (72%) and thus the biggest potential gain.
+WRONG The least promising component to work on is the character recognition system, since it is already obtaining 100\% accuracy.
+\textit{The character recogntion component is th emost poromsing, as ground truth character recogntion  impresoves performance by 18\% over feeding the currenct charcter recongition sysystenm ground truth character segmentation.}
 
+SELECTED The most promising component to work on is the text detection system, since it has the lowest performance (72\%) and thus the biggest potential gain.
 
+\end{document}
 
 
