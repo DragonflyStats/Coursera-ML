@@ -110,6 +110,25 @@ Which of the following statements are true? Select all that apply.
 
 %====================================================================%
 \newpage
+\section*{Anomaly Detection}
+\begin{itemize}
+	\item Suppose you are developing an anomaly detection system to catch manufacturing defects in airplane engines. 
+	\item Your model uses
+	{ 
+		\Large
+		\[p(x)= \Pi ^{n}_{j=1} p(x_j;\mu_j,\sigma^2_j)\] 
+	}
+	\item You have two features $x_1$ = \textit{\textbf{vibration intensity}}, and $x_2$ = \textit{\textbf{heat generated}}. 
+	\item Both $x_1$ and $x_2$ take on values between 0 and 1 (and are strictly greater than 0), and for most "normal" engines you expect that $x_2 \approx x_2$. 
+	\item One of the suspected anomalies is that a flawed engine may vibrate very intensely even without generating much heat (large $x_1$, small $x_2$), 
+	even though the particular values of $x_1$ and $x_2$ may not fall outside their typical ranges of values. 
+	\item What additional feature $x_3$ should you create to capture these types of anomalies:
+\end{itemize}
+\textbf{Solution Options}
+\begin{itemize}
+	\item $x_3=x_1+x_2$	This could take on large or small values for both normal and anomalous examples, so it is not a good feature.
+\end{itemize}
+
 \section{Week 9 Quiz. Anomaly Detection}
 
 %--------------------------------------------------------------------%
