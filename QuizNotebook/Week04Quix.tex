@@ -1,0 +1,141 @@
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+\usepackage{framed}
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+\usepackage{framed}
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+\begin{document}
+
+	\section{Week 4 - Neural Networks : Representation}
+	
+	
+	Topics: Neural Networks: Representation
+	
+	Programming Exercise 3 : Multi-class classification and neural networks.
+	Close
+	Neural Networks: Representation
+	
+Close
+Neural Networks: Representation
+
+%---------------------------------------%
+\subsection*{Question 1. }
+Which of the following statements are true? Check all that apply.
+
+SELECTED If a neural network is overfitting the data, one solution would be to increase the regularization parameter $\lambda$.
+
+In a neural network with many layers, we think of each successive layer as being able to use the earlier layers as features, so as to be able to compute increasingly complex functions.
+
+WRONG If a neural network is overfitting the data, one solution would be to decrease the regularization parameter $\lambda$.
+
+WRONG Suppose you have a multi-class classification problem with three classes, trained with a 3 layer network. Let a(3)1=(h$\Theta$(x))1 be the activation of the first output unit, and similarly a(3)2=(h$\Theta$(x))2 and a(3)3=(h$\Theta$(x))3. Then for any input x, it must be the case that a(3)1+a(3)2+a(3)3=1.
+
+
+%---------------------------------------%
+\subsection*{Question 2.} 
+Consider the following neural network which takes two binary-valued inputs x1,x2 $\in \{0,1\}$ and outputs h$\Theta$(x). Which of the following logical functions does it (approximately) compute?
+
+\begin{itemize}
+	\item OR
+	\item AND
+	\item NAND (meaning "NOT AND")
+	\item XOR (exclusive OR)
+\end{itemize}
+
+
+
+
+
+%---------------------------------------%
+\subsection*{Question 3. }
+Consider the neural network given below. Which of the following equations correctly computes the activation a(3)1? Note: g(z) is the sigmoid activation function.
+
+
+
+a(3)1=g($\Theta$(2)1,0a(2)0+$\Theta$(2)1,1a(2)1+$\Theta$(2)1,2a(2)2)
+
+a(3)1=g($\Theta$(2)1,0a(1)0+$\Theta$(2)1,1a(1)1+$\Theta$(2)1,2a(1)2)
+
+a(3)1=g($\Theta$(1)1,0a(2)0+$\Theta$(1)1,1a(2)1+$\Theta$(1)1,2a(2)2)
+
+a(3)1=g($\Theta$(2)2,0a(2)0+$\Theta$(2)2,1a(2)1+$\Theta$(2)2,2a(2)2)
+%---------------------------------------%
+\subsection*{Question 4. }
+You have the following neural network:
+
+
+You'd like to compute the activations of the hidden layer a(2)$\in R^3$. One way to do so is the following Octave code:
+
+
+You want to have a vectorized implementation of this (i.e., one that does not use for loops). Which of the following implementations correctly compute a(2)? Check all that apply.
+
+\begin{itemize}
+\item z = Theta1 * x; a2 = sigmoid (z);
+
+\item a2 = sigmoid (x * Theta1);
+
+\item a2 = sigmoid (Theta2 * x);
+
+\item \texttt{z = sigmoid(x); a2 = sigmoid (Theta1 * z) };
+\end{itemize}
+
+
+%---------------------------------------%
+\subsection*{Question 5}
+
+You are using the neural network pictured below and have learned the parameters 
+$\Theta$(1)=[111 1.7 2.4 3.2] 
+(used to compute a(2)) and $\Theta$(2)=[10.3-1.2] 
+
+(used to compute a(3)) as a function of a(2)). 
+
+Suppose you swap the parameters for the first hidden layer between its two units so $\Theta$(1)=[111.713.22.4] and also swap the output layer so $\Theta$(2)=[1-1.20.3]. How will this change the value of the output h$\Theta$(x)?
+
+\begin{itemize}
+	
+	\item It will stay the same.
+	
+	\item It will increase.
+	
+	\item It will decrease
+	
+	\item Insufficient information to tell: it may increase or decrease.
+	
+\end{itemize}
+
+
+\end{document}
