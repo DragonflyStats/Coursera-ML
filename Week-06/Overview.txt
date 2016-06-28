@@ -1,8 +1,0 @@
-Overview for Week 6
-
-December 2 - December 9
-Advice for Applying Machine Learning
-Machine Learning System Design
-Due Sunday, December 8 at 23:59 PM PDT
-Review Questions (for the week's topics)
-Programming Exercise (Bias-variance)

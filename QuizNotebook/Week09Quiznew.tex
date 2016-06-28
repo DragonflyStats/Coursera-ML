@@ -40,6 +40,160 @@
 \renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
 \begin{document}
 
+\section{Week 9 Quiz. Anomaly Detection}
+\section*{Anomaly Detection}
+\begin{itemize}
+	\item Suppose you are developing an anomaly detection system to catch manufacturing defects in airplane engines. 
+	\item Your model uses
+	{ 
+		\Large
+		\[p(x)= \Pi ^{n}_{j=1} p(x_j;\mu_j,\sigma^2_j)\] 
+	}
+	\item You have two features $x_1$ = \textit{\textbf{vibration intensity}}, and $x_2$ = \textit{\textbf{heat generated}}. 
+	\item Both $x_1$ and $x_2$ take on values between 0 and 1 (and are strictly greater than 0), and for most "normal" engines you expect that $x_2 \approx x_2$. 
+	\item One of the suspected anomalies is that a flawed engine may vibrate very intensely even without generating much heat (large $x_1$, small $x_2$), 
+	even though the particular values of $x_1$ and $x_2$ may not fall outside their typical ranges of values. 
+	\item What additional feature $x_3$ should you create to capture these types of anomalies:
+\end{itemize}
+\textbf{Solution Options}
+\begin{itemize}
+	\item $x_3=x_1+x_2$	This could take on large or small values for both normal and anomalous examples, so it is not a good feature.
+\end{itemize}
+
+
+%--------------------------------------------------------------------%
+\subsection*{Question 1. }
+For which of the following problems would \textbf{anomaly detection} be a suitable algorithm?
+
+\begin{itemize}
+	\item From a large set of hospital patient records, predict which patients have a particular disease (say, the flu).
+	\item From a large set of primary care patient records, identify individuals who might have unusual health conditions.
+	\item CORRECT
+	Given data from credit card transactions, classify each transaction according to type of purchase (for example: food, transportation, clothing).
+	\item 
+	In a computer chip fabrication plant, identify microchips that might be defective.
+\end{itemize}
+
+%--------------------------------------------------------------------%
+\subsection*{Question 2. Variant A}
+Suppose you have trained an anomaly detection system that flags anomalies when p(x) is less than $\epsilon$, and you find on the cross-validation set that it has 
+too many false negatives (failing to flag a lot of anomalies). What should you do?
+
+
+\begin{itemize}
+	\item Increase $\epsilon$ [CORRECT]
+	\item Decrease $\epsilon$
+\end{itemize}
+
+\subsection*{Question 2. Variant B}
+Suppose you have trained an anomaly detection system for fraud detection, and your system that flags 
+anomalies when p(x) is less than $\epsilon$, and you find on the 
+cross-validation set that it mis-flagging far too many good transactions as fradulent. What should you do?
+
+\begin{itemize}
+	\item Increase $\epsilon$ 
+	\item Decrease $\epsilon$ [CORRECT]
+\end{itemize}
+
+%--------------------------------------------------------------------%
+\subsection*{Question 3. }
+Suppose you are developing an anomaly detection system to catch manufacturing defects in airplane engines. You model uses
+
+% \[p(x)=∏nj=1p(xj;\muj,\sigma^2_j).\]
+
+You have two features $x_1$ = vibration intensity, and $x_2$ = heat generated. 
+
+Both x1 and x2 take on values between 0 and 1 (and are strictly greater than 0), and for most "normal" engines you expect that $x_1 \approx x_2$. 
+
+One of the suspected anomalies is that a flawed engine may vibrate very intensely even without generating much heat (large x1, small x2), even though the particular values of x1 and x2 may not fall outside their typical ranges of values. What additional feature x3 should you create to capture these types of anomalies:
+
+\begin{itemize}
+	\item x3=x1/x2 [CORRECT]
+	
+	\item x3=x21 $times$ x2
+	
+	\item x3=x1 $times$ x2
+	
+	\item  x3=x1+x2
+	
+\end{itemize}
+
+%--------------------------------------------------------------------%
+\subsection*{Question 4. }
+Which of the following are true? Check all that apply.
+
+\begin{itemize}
+	\item When evaluating an anomaly detection algorithm on the cross validation set (containing some positive and some negative examples), classification accuracy is usually a good evaluation metric to use.
+	\item  In anomaly detection, we fit a model p(x) to a set of negative (y=0) examples, without using any positive examples we may have collected of previously observed anomalies.
+	\item \textbf{CORRECT} When developing an anomaly detection system, it is often useful to select an appropriate numerical performance metric to evaluate the effectiveness of the learning algorithm.
+	\item In a typical anomaly detection setting, we have a large number of anomalous examples, and a relatively small number of normal/non-anomalous examples.
+\end{itemize}
+%--------------------------------------------------------------------%
+\subsection*{Question 5. }
+You have a 1-D dataset $\{x(1),\ldots,x(m)\}$ and you want to detect outliers in the dataset. You first plot the dataset and it looks like this:
+
+
+Suppose you fit the gaussian distribution parameters $\mu_1$ and $\sigma^2_1$ to this dataset. Which of the following values for $\mu_1$ and $\sigma^2_1$ might you get?
+\begin{itemize}
+	\item $\mu_1$=-3,$\sigma^2_1$=4
+	\item 
+	$\mu_1$=-6,$\sigma^2_1$=4
+	\item
+	$\mu_1$=-3,$\sigma^2_1$=2
+	\item 
+	$\mu_1$=-6,$\sigma^2_1$=2
+\end{itemize}
+
+
+
+%------------------------------------------------%
+% ML Week 9
+
+\section{Week 9 Quiz. Recommender Systems}
+
+Information Filtering System that attempts to recommend information items likely
+to be of interest to a user.
+
+\textbf{Commonly used algorithms}
+\begin{itemize}
+	\item $k-$means clustering
+	\item Pearson's Rho
+	\item Collaborative Filtering
+\end{itemize}
+
+Collaborative Filtering is the process of filtering for information or patterns using collaboration among multiple
+agents.
+
+Applications: online news aggregation or similar items of clothings
+
+best approached by other methods - prediction
+
+Collaborative Filtering Gradient
+%NOT FINISHED
+
+\[ \frac{\partial J}{\partial X^{(i)}_k}  = \sum [  ] \theta^{(j)}_k \]
+\[ \frac{\partial J}{\partial \theta^{(i)}_k}  = \sum [  ] X^{(j)}_k \]
+
+No regularization applied
+
+%--------------------------------------%
+Anomaly Detection
+Gaussian Distribution
+Estimate Gaussian Distribution
+
+For $n$ feastures of $X$ , compute the mean and variance for each feature
+
+%-----------%
+Selecting Threshold of $\epsilon$.
+
+Implement an algorithm to select the threshold $\epsilon$ using an $F_i$ score on a 
+cross validation set.
+
+$P(X) < \epsilon$ is considered to be an anomaly.
+
+\subsection{$F_1$ Score}
+
+
 
 \section*{Recommender Systems}
 
