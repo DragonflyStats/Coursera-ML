@@ -42,7 +42,7 @@
 
 %=================================================================%
 
-\section{ML Week 5}
+\section{ML Week 5:  Neural Network Learning}
 \subsection*{Overfitting and Regularization}
 
 \begin{itemize}
@@ -53,6 +53,67 @@ code is correct, we usually disable gradient checkking before using back-propaga
 the network
 \end{itemize}
 %--------------------------%
+
+
+%=================================================================%
+
+
+\section{Neural Networks: Learning}
+
+
+%-----------------------------------------------------------------------%
+\subsection*{ Question 1. }
+You are training a three layer neural network and would like to use backpropagation to compute the gradient of the cost function. 
+
+In the backpropagation algorithm, one of the steps is to update
+
+\[ \delta(2)ij:=\delta(2)ij+\delta(3)i \ast (a(2))j \]
+for every i,j. Which of the following is a correct vectorization of this step?
+
+\begin{itemize}
+	\item $\Delta(2) :=\Delta(2)+\delta(3) \ast (a(3))^T$
+	
+	\item $\Delta(2) :=\Delta(2)+(a(2))^T \ast \delta(3)$
+	
+	\item $\Delta(2) :=\Delta(2)+(a(3))^T \ast\delta(2)$
+	
+	\item $\Delta(2) :=\Delta(2)+\delta(3) \ast (a(2))^T$
+\end{itemize}
+%-----------------------------------------------------------------------%
+\subsection*{ Question 2. }
+Suppose Theta1 is a $5\times 3$ matrix, and Theta2 is a $4\times 6$ matrix. You set \texttt{thetaVec=[Theta1(:);Theta2(:)]}. 
+
+Which of the following correctly recovers Theta2?
+
+\begin{itemize}
+	\item \texttt{reshape(thetaVec(16:39),4,6)} CORRECT
+	
+	\item \texttt{reshape(thetaVec(15:38),4,6)}
+	
+	\item \texttt{reshape(thetaVec(16:24),4,6)}
+	
+	\item \texttt{reshape(thetaVec(15:39),4,6)}
+	
+	\item \texttt{reshape(thetaVec(16:39),6,4)}
+\end{itemize}
+%-----------------------------------------------------------------------%
+\subsection*{ Question 3. }
+%CORRECT
+ 
+Let $J(\theta) = 3\theta^3 + 2$. 
+
+Let $\theta=1$, and $\epsilon=0.01$. 
+
+Use the formula $J(\theta+\epsilon)-J(\theta-\epsilon)2\epsilon$ to numerically compute an approximation to the derivative at $\theta=1$. 
+
+What value do you get? (When $\theta=1$, the true/exact derivative is $ \frac{d J(\theta)}{ d\theta}=9$.)
+
+\begin{itemize}
+	\item 9
+	\item 8.9997
+	\item 11
+	\item 9.0003
+\end{itemize}
 
 \subsection*{Exercise}
 Let $ J(\theta) = 3\theta^2 + 2$
@@ -69,6 +130,50 @@ at $theta = 1$
 = \frac{(3(1.01)^2 + 2) - (3(0.99)^2 + 2)}{0.002} 
 = 9.003
 \]
-%=================================================================%
+%-----------------------------------------------------------------------%
+\subsection*{ Question 4. }
+Which of the following statements are true? Check all that apply.
+
+\begin{itemize}
+	\item WRONG Computing the gradient of the cost function in a neural network has the same efficiency when we use backpropagation or when we numerically compute it using the method of gradient checking.
+	
+	\item CORRECT For computational efficiency, after we have performed gradient checking to verify that our backpropagation code is correct, we usually disable gradient checking before using backpropagation to train the network.
+	
+	\item Using gradient checking can help verify if one's implementation of backpropagation is bug-free.
+	
+	\item Gradient checking is useful if we are using one of the advanced optimization methods (such as in fminunc) as our optimization algorithm. However, it serves little purpose if we are using gradient descent.
+	
+	\item Using gradient checking can help verify if one's implementation of backpropagation is bug-free.
+	
+	\item Using a large value of $\lambda$ cannot hurt the performance of your neural network; the only reason we do not set $\lambda$ to be too large is to avoid numerical problems.
+	
+	\item If our neural network overfits the training set, one reasonable step to take is to increase the regularization parameter $\lambda$.
+	
+	\item Gradient checking is useful if we are using gradient descent as our optimization algorithm. However, it serves little purpose if we are using one of the advanced optimization methods (such as in fminunc).
+	
+\end{itemize}
+%-----------------------------------------------------------------------%
+\subsection*{ Question 5. }
+Which of the following statements are true? Check all that apply.
+
+\begin{itemize}
+	\item Suppose that the parameter $\theta(1)$ is a square matrix (meaning the number of rows equals the number of columns). If we replace $\theta(1)$ with its transpose ($\theta(1)^T$), then we have not changed the function that the network is computing.
+	
+	\item CORRECT Suppose we have a correct implementation of backpropagation, and are training a neural network using gradient descent. Suppose we plot $J(\theta)$ as a function of the number of iterations, and find that it is increasing rather than decreasing. One possible cause of this is that the learning rate $\alpha$ is too large.
+	
+	\item CORRECT If we are training a neural network using gradient descent, one reasonable "debugging" step to make sure it is working is to plot $J(\theta)$ as a function of the number of iterations, and make sure it is decreasing (or at least non-increasing) after each iteration.
+	
+	\item Suppose we are using gradient descent with learning rate $\alpha$. For logistic regression and linear regression, $J(\theta)$ was a convex optimization problem and thus we did not want to choose a learning rate $\alpha$ that is too large. For a neural network however, $J(\theta)$ may not be convex, and thus choosing a very large value of $\alpha$ can only speed up convergence.
+	
+	
+	\item WRONG Suppose you have a three layer network with parameters $\theta(1)$ (controlling the function mapping from the inputs to the hidden units) and $\theta(2)$ (controlling the mapping from the hidden units to the outputs). If we set all the elements of $\theta(1)$ to be 0, and all the elements of $\theta(2)$ to be 1, then this suffices for symmetry breaking, since the neurons are no longer all computing the same function of the input.
+	
+	\item WRONG If we initialize all the parameters of a neural network to ones instead of zeros, this will suffice for the purpose of "symmetry breaking" because the parameters are no longer symmetrically equal to zero.
+	
+	
+	
+	
+\end{itemize}
+%--------------------%
 
 \end{document}

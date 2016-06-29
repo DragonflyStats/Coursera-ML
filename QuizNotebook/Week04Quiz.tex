@@ -104,11 +104,11 @@ You'd like to compute the activations of the hidden layer a(2)$\in R^3$. One way
 You want to have a vectorized implementation of this (i.e., one that does not use for loops). Which of the following implementations correctly compute a(2)? Check all that apply.
 
 \begin{itemize}
-\item z = Theta1 * x; a2 = sigmoid (z);
+\item \texttt{z = Theta1 * x;} \texttt{a2 = sigmoid (z);}
 
-\item a2 = sigmoid (x * Theta1);
+\item \texttt{a2 = sigmoid (x * Theta1);}
 
-\item a2 = sigmoid (Theta2 * x);
+\item \texttt{a2 = sigmoid (Theta2 * x);}
 
 \item \texttt{z = sigmoid(x); a2 = sigmoid (Theta1 * z) };
 \end{itemize}

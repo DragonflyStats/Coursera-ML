@@ -84,6 +84,97 @@ On every iteration of $k-$means, the cost function $J(C^{(1)},C^{(2)},\ldots, C^
 The distortion function should either stay the same or decrease, in particular it should not increase.
 
 
+\section{Week 7 Unsupervised Learning}
+\subsection{K-means Clustering}
+
+
+\begin{itemize}
+	\item In this this exercise, you will implement the K-means algorithm and use it for image compression.
+	
+	\item You will first start on an example 2D dataset that will help you gain an intuition of
+	how the K-means algorithm works. After that, you wil use the K-means algorithm for image
+	compression by reducing the number of colors that occur in an image to only those that are most common in that image.
+	
+	\item You will be using ex7.m for this part of the exercise.
+	
+\end{itemize}
+
+\subsection{Implementing K-means}
+\begin{itemize}
+	\item The K-means algorithm is a method to automatically cluster similar data examples together.
+	
+	\item The intuition behind K-means is an iterative procedure that starts by guessing the initial centroids, and then refines this guess by repeatedly assigning examples to their closest centroids and then recomputing the centroids based on the assignments.
+	
+	\item The inner-loop of the algorithm repeatedly carries out two steps: 
+	\begin{itemize}
+		\item[(i)] Assigning each training example to its closest centroid 
+		\item[(ii)] Recomputing the mean of each centroid using the points assigned to it. 
+	\end{itemize}
+	
+	
+	\item The K-means algorithm will always converge to some final set of means for the centroids.
+	Note that the converged solution may not always be ideal and depends on the initial setting of the centroids. 
+	
+	\item Therefore, in practice the K-means algorithm is usually run a few times with different random initializations. 
+	
+	\item One way to choose between these different solutions from different random initializations is to choose the one with the lowest cost function value (distortion).
+	
+	\item Random initialization
+	The initial assignments of centroids for the example dataset in \texttt{ex7.m} were designed so that you will see the same gure as in Figure 1. 
+	
+	\item In practice, a good strategy for initializing the centroids is to select random examples from the training set.
+\end{itemize}
+%=================================================================%
+\newpage
+\subsection*{Question 1. }
+For which of the following tasks might K-means clustering be a suitable algorithm? Select all that apply.
+
+\begin{itemize}
+	\item 
+	\item
+	\item 
+	\item 
+	
+\end{itemize}
+%=================================================================%
+\subsection*{Question 2.} 
+Suppose we have three cluster centroids $\mu_1$=$[1 2]^T$, $\mu_2$=$[-3 0]^T$ and $\mu_3$=$[4 2]^T$. 
+Furthermore, we have a training example x(i)=$[3 1]^T$. After a cluster assignment step, what will $c^{(i)}$ be?
+
+\begin{itemize}
+	\item[(1)] $(3-1)^2 + (1-2)^2 $
+	\item[(2)] $(3-1)^2 + (1-2)^2 $
+	\item[(3)] $(3-1)^2 + (1-2)^2 $
+	\item 
+	
+\end{itemize}
+
+%=================================================================%
+\subsection*{Question 3.}
+K-means is an iterative algorithm, and two of the following steps are repeatedly carried out in its inner-loop. Which two?
+\begin{itemize}
+	\item 
+	\item
+	\item 
+	\item 
+	
+\end{itemize}
+
+%=================================================================%
+\subsection*{Question 4. }
+Suppose you have an unlabeled dataset $\{x(1),\ldots,x(m)\}$. You run K-means with 50 different random
+initializations, and obtain 50 different clusterings of the data. 
+What is the recommended way for choosing which one of these 50 clusterings to use?
+
+%=================================================================%
+\subsection*{Question 5. }
+Which of the following statements are true? Select all that apply.
+
+
+
+%====================================================================%
+\newpage
+
 \section{Week 8 Unsupervised Learning}
 
 %-----------------------------------------------%
