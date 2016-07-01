@@ -41,12 +41,9 @@
 \begin{document}
 %=================================================================%
 
-
-%------------------------------------------------%
-
 %ML Week 6
-
-\section*{High variance}
+\section*{Revision}
+\subsection*{High variance}
 
 \begin{itemize}
 	\item indicated by gap in errors between training and testing data sets.
@@ -57,50 +54,38 @@ The recommended way to choose a value of regularization parameter $\lambda$ to u
 the lowest cross validation error.
 You should not use the training data set for this purpose.
 
-\section{Week 6: Advice for Applying Machine Learning}
+\newpage
+\section*{Week 6: Advice for Applying Machine Learning}
 
 \subsection*{Question 1. }
 You train a learning algorithm, and find that it has unacceptably high error on the test set. You plot the learning curve, and obtain the figure below. Is the algorithm suffering from high bias, high variance, or neither?
 
 \begin{itemize}
-	\item Neither
+	\item[(i)] Neither
 	
-	\item High variance
+	\item[(ii)] High variance
 	
-	\item High bias
+	\item[(iii)] High bias
 \end{itemize}
 
 
 %-----------------------------------------------------------%
 \subsection*{Question 2. }
-Suppose you have implemented regularized logistic regression  to classify what object is in an image (i.e., to do object recognition). However, when you test your hypothesis on a new set of images, you find that it makes unacceptably large 
-errors with its predictions on the new images. However, your
-
-hypothesis performs well (has low error) on the
-
-training set. Which of the following are promising steps to
-
-take? Check all that apply.
+Suppose you have implemented regularized logistic regression  to classify what object is in an image (i.e., to do object recognition). However, when you test your hypothesis on a new set of images, you find that it makes unacceptably large errors with its predictions on the new images. However, your hypothesis performs well (has low error) on the training set. Which of the following are promising steps to take? Check all that apply.
 
 \begin{itemize}
-\item 
+\item[(i)] 
 Try increasing the regularization parameter $\lambda$.
-\item 
+\item[(ii)] 
 Try evaluating the hypothesis on a cross validation set rather than the test set.
-\item 
+\item[(iii)] 
 Try using a smaller set of features.
-\item 
+\item[(iv)] 
 Try decreasing the regularization parameter $\lambda$.
 \end{itemize}
 %-----------------------------------------------------------%
 \subsection*{Question 3. }
-Suppose you have implemented regularized logistic regression
-
-to predict what items customers will purchase on a web shopping site. However, when you test your hypothesis on a new
-
-set of customers, you find that it makes unacceptably large errors in its predictions. Furthermore, the hypothesis
-
-performs poorly on the training set. Which of the following might be promising steps to take? Check all that apply.
+Suppose you have implemented regularized logistic regression to predict what items customers will purchase on a web shopping site. However, when you test your hypothesis on a new set of customers, you find that it makes unacceptably large errors in its predictions. Furthermore, the hypothesis performs poorly on the training set. Which of the following might be promising steps to take? Check all that apply.
 
 \begin{itemize}
 \item[(i)] Try decreasing the regularization parameter $\lambda$.
@@ -111,7 +96,7 @@ performs poorly on the training set. Which of the following might be promising s
 
 \item[(iv)] Try adding polynomial features.
 \end{itemize}
-%-----------------------------------------------------------%
+%=====================================================================================%
 \subsection*{Question 4. }
 Which of the following statements are true? Check all that apply.
 
@@ -145,7 +130,7 @@ If a learning algorithm is suffering from high bias, only adding more training e
 \section*{Week 6: Machine Learning System Design}
 
 \subsection*{Question 1} 
-You are working on a spam classification system using regularized logistic regression. "Spam" is a positive class (y = 1) and "not spam" is the negative class (y = 0). You have trained your classifier and there are m = 1000 examples in the cross-validation set. The chart of predicted class vs. actual class is:
+You are working on a spam classification system using regularized logistic regression. ``\textit{Spam}" is a positive class (y = 1) and ``\textit{not spam}" is the negative class (y = 0). You have trained your classifier and there are m = 1000 examples in the cross-validation set. The chart of predicted class vs. actual class is:
 
 \begin{center}
 \begin{tabular}{|c|c|c|}\hline 
@@ -175,39 +160,19 @@ Enter your answer in the box below. If necessary, provide at least two values af
 %----------------------------------------------------------%
 \subsection{Question 1} 
 CORRECT
-Suppose a massive dataset is available for training a learning algorithm. Training on a lot of data is likely to give good performance when two of the following conditions hold true.
-
-Which are the two?
+Suppose a massive dataset is available for training a learning algorithm. Training on a lot of data is likely to give good performance when two of the following conditions hold true. Which are the two?
 
 \begin{itemize}
-	\item When we are willing to include high
+	\item[(i)] WRONG When we are willing to include high order polynomial features of x (such as $x^2_1$, $x^2_2$, $x_1x_2$, etc.).
 	
-	order polynomial features of x (such as x21, x22,
-	
-	x1x2, etc.).
-	
-\item	SELECTED The features x contain sufficient
-	
-	information to predict y accurately. (For example, one
-	
-	way to verify this is if a human expert on the domain
-	
-	can confidently predict y when given only x).
+\item[(ii)]	SELECTED The features x contain sufficient information to predict y accurately. (For example, one way to verify this is if a human expert on the domain can confidently predict y when given only x).
 	
 	
-\item 	SELECTED  We train a learning algorithm with a
-	
-	large number of parameters (that is able to
-	
-	learn/represent fairly complex functions).
+\item[(iii)] 	SELECTED  We train a learning algorithm with a 	large number of parameters (that is able to learn/represent fairly complex functions).
 	
 	
 	
-\item 	We train a learning algorithm with a
-	
-	small number of parameters (that is thus unlikely to
-	
-	overfit).
+\item[(iv)] 	We train a learning algorithm with a small number of parameters (that is thus unlikely to overfit).
 \end{itemize}
 
 
@@ -215,84 +180,56 @@ Which are the two?
 %----------------------------------------------------------%
 \subsection{Question 3.}
 
-
-Suppose you have trained a logistic regression classifier which is outputing $h\theta(x)$.
-
-
-Currently, you predict 1 if $h\theta(x) \geq $threshold, and predict 
-0 if $h\theta(x)$ < threshold, where currently the threshold is set to 0.5.
-
-Suppose you decrease the threshold to 0.1. Which of the following are true? Check all that apply.
+Suppose you have trained a logistic regression classifier which is outputing $h\theta(x)$. Currently, you predict 1 if $h\theta(x) \geq $threshold, and predict 0 if $h\theta(x)$ < threshold, where currently the threshold is set to 0.5. Suppose you decrease the threshold to 0.1. Which of the following are true? Check all that apply.
 
 \begin{itemize}
-	\item The classifier is likely to have unchanged precision and recall, but
+	\item[(i)] The classifier is likely to have unchanged precision and recall, but lower accuracy.
 	
-	lower accuracy.
+\item[(ii)] 	The classifier is likely to now have higher precision.
 	
-\item 	The classifier is likely to now have higher precision.
+\item[(iii)] 	SELECTED The classifier is likely to now have higher recall.
 	
-\item 	SELECTED The classifier is likely to now have higher recall.
-	
-\item	The classifier is likely to have unchanged precision and recall, but higher accuracy.
+\item[(iv)]	The classifier is likely to have unchanged precision and recall, but higher accuracy.
 	
 	%----------------------%
 	
-\item 	The classifier is likely to have unchanged precision and recall, and thus the same F1 score.
+\item[(v)] 	The classifier is likely to have unchanged precision and recall, and thus the same F1 score.
 	
-\item 	The classifier is likely to have unchanged precision and recall, but	higher accuracy.
+\item[(vi)] 	The classifier is likely to have unchanged precision and recall, but	higher accuracy.
 	
 	
-\item 	SELECTED The classifier is likely to now have lower precision.
+\item[(vii)] 	SELECTED The classifier is likely to now have lower precision.
 	
-\item	The classifier is likely to now have lower recall.
+\item[(viii)]	The classifier is likely to now have lower recall.
 \end{itemize}
 
 %---------------------------------------------------------%
 %----------------------------------------------------------%
 \subsection*{Question 4.} WRONG
-Suppose you are working on a spam classifier, where spam
+Suppose you are working on a spam classifier, where spam emails are positive examples (y=1) and non-spam emails are
+negative examples (y=0). You have a training set of emails in which 99\% of the emails are non-spam and the other 1\% is
+spam. Which of the following statements are true? Check all that apply.
 
-emails are positive examples (y=1) and non-spam emails are
+\begin{itemize}
+	\item WRONG If you always predict spam (output y=1), your classifier will have a recall of 0\% and precision of 99\%.
+	
+	
+	\item WRONG If you always predict non-spam (output y=0), your classifier will have a recall of 0\%.
+	
+	
+	\item CORRECT If you always predict spam (output y=1), your classifier will have a recall of 100\% and precision of 1\%.
+	
+	
+	
+	\item CORRECT If you always predict non-spam (output y=0), your classifier will have an accuracy of 99\%.
+\end{itemize}
 
-negative examples (y=0). You have a training set of emails
+\[\begin{array}{|c|c|c} \hline 
+&   predict T	& predict F\\ \hline
+actual T &	&  \\ \hline 
+actual F & &  \\ \hline
+\end{array} \]
 
-in which 99% of the emails are non-spam and the other 1% is
-
-spam. Which of the following statements are true? Check all
-
-that apply.
-
-
-WRONG If you always predict spam (output y=1),
-
-your classifier will have a recall of 0% and precision
-
-of 99%.
-
-
-WRONG If you always predict non-spam (output
-
-y=0), your classifier will have a recall of
-
-0%.
-
-
-CORRECT If you always predict spam (output y=1),
-
-your classifier will have a recall of 100% and precision
-
-of 1%.
-
-
-
-CORRECT If you always predict non-spam (output
-
-y=0), your classifier will have an accuracy of
-
-99%.
-             predict T	predict F
-actual T	
-actual F
 
 %--------------------------------------%
 %----------------------------------------------------------%
@@ -301,20 +238,20 @@ actual F
 Which of the following statements are true? Check all that apply.
 
 \begin{itemize}
-\item CORRECT Using a very large training set makes it unlikely for model to overfit the training data.
+\item[(i)] CORRECT Using a very large training set makes it unlikely for model to overfit the training data.
 	
 	
-\item 	WRONG If your model is underfitting the training set, then obtaining more data is likely to help.
+\item[(ii)] 	WRONG If your model is underfitting the training set, then obtaining more data is likely to help.
 	
-\item 	CORRECT The "error analysis" process of manually examining the examples which your algorithm got wrong	can help suggest what are good steps to take (e.g., developing new features) to improve your algorithm's performance.
-	
-	
-	
-\item	WRONG It is a good idea to spend a lot of time collecting a large amount of data before building your first version of a learning algorithm.
+\item[(iii)] 	CORRECT The "error analysis" process of manually examining the examples which your algorithm got wrong	can help suggest what are good steps to take (e.g., developing new features) to improve your algorithm's performance.
 	
 	
 	
-\item WRONG After training a logistic regression classifier, you must use 0.5 as your threshold for predicting whether an example is positive or	negative.
+\item[(iv)]	WRONG It is a good idea to spend a lot of time collecting a large amount of data before building your first version of a learning algorithm.
+	
+	
+	
+\item[(v)] WRONG After training a logistic regression classifier, you must use 0.5 as your threshold for predicting whether an example is positive or	negative.
 \end{itemize}
 
 
