@@ -1,0 +1,82 @@
+Close
+Neural Networks: Representation
+
+5 questions
+1
+point
+1. 
+Which of the following statements are true? Check all that apply.
+
+SELECTED A two layer (one input layer, one output layer; no hidden layer) neural network can represent the XOR function.
+
+The activation values of the hidden units in a neural network, with the sigmoid activation function applied at every layer, are always in the range (0, 1).
+
+SELECTED Any logical function over binary-valued (0 or 1) inputs x1 and x2 can be (approximately) represented using some neural network.
+
+Suppose you have a multi-class classification problem with three classes, trained with a 3 layer network. Let a(3)1=(hΘ(x))1 be the activation of the first output unit, and similarly a(3)2=(hΘ(x))2 and a(3)3=(hΘ(x))3. Then for any input x, it must be the case that a(3)1+a(3)2+a(3)3=1.
+
+----------------------------------------------------------------------------
+2. 
+Consider the following neural network which takes two binary-valued inputs x1,x2∈{0,1} and outputs hΘ(x). Which of the following logical functions does it (approximately) compute?
+
+
+
+WRONG OR
+
+WRONG AND
+
+NAND (meaning "NOT AND")
+
+XOR (exclusive OR)
+
+--------------------------------------------------------------------------
+3. 
+Consider the neural network given below. Which of the following equations correctly computes the activation a(3)1? Note: g(z) is the sigmoid activation function.
+
+
+
+a(3)1=g(Θ(2)1,0a(2)0+Θ(2)1,1a(2)1+Θ(2)1,2a(2)2)
+
+a(3)1=g(Θ(2)1,0a(1)0+Θ(2)1,1a(1)1+Θ(2)1,2a(1)2)
+
+a(3)1=g(Θ(1)1,0a(2)0+Θ(1)1,1a(2)1+Θ(1)1,2a(2)2)
+
+a(3)1=g(Θ(2)2,0a(2)0+Θ(2)2,1a(2)1+Θ(2)2,2a(2)2)
+
+--------------------------------------------------------------------------
+
+4. 
+You have the following neural network:
+
+
+You'd like to compute the activations of the hidden layer a(2)∈R3. One way to do so is the following Octave code:
+
+
+You want to have a vectorized implementation of this (i.e., one that does not use for loops). Which of the following implementations correctly compute a(2)? Check all that apply.
+
+
+SELECTED a2 = sigmoid (Theta1 * x);
+
+SELECTED a2 = sigmoid (x * Theta1);
+
+a2 = sigmoid (Theta2 * x);
+
+z = sigmoid(x); a2 = Theta1 * z;
+--------------------------------------------------------------------------
+
+5. 
+You are using the neural network pictured below and have learned the parameters Θ(1)=[112.10.61.3−1.2] (used to compute a(2)) and Θ(2)=[14.53.1] (used to compute a(3)} as a function of a(2)). Suppose you swap the parameters for the first hidden layer between its two units so Θ(1)=[110.62.1−1.21.3] and also swap the output layer so Θ(2)=[13.14.5]. How will this change the value of the output hΘ(x)?
+
+
+
+CORRECT It will stay the same.
+
+It will increase.
+
+It will decrease
+
+Insufficient information to tell: it may increase or decrease.
+3 questions unanswered
+Submit Quiz
+
+
