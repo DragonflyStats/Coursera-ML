@@ -255,7 +255,50 @@ Which of the following statements are true? Check all that apply.
 \end{itemize}
 
 
+\newpage
 
+What is the classifier's recall  : 0.85
+Accuracy : 0.095
+%---------------------------------------------------------------%
+Suppose a massive dataset is available for training a learning algorithm. Training on a lot of data is likely to give good performance when two of the following conditions hold true.
+
+Which are the two?
+
+
+We train a learning algorithm with a large number of parameters (that is able to learn/represent fairly complex functions).
+
+We train a learning algorithm with a small number of parameters (that is thus unlikely to overfit).
+
+CORRECT The features x contain sufficient information to predict y accurately. (For example, one way to verify this is if a human expert on the domain can confidently predict y when given only x).
+
+WRONG When we are willing to include high order polynomial features of x (such as x21, x22, x1x2, etc.).
+
+%---------------------------------------------------------------%
+
+CORRECT The classifier is likely to now have lower precision.
+
+%---------------------------------------------------------------%
+
+
+CORRECT If you always predict non-spam (output y=0), your classifier will have a Recall of 0%.
+
+If you always predict non-spam (output y=0), your classifier will have an accuracy of 99%.
+
+WRONG If you always predict non-spam (output y=0), your classifier will have 99% accuracy on the training set, and it will likely perform similarly on the cross validation set.
+
+WRONG If you always predict non-spam (output y=0), your classifier will have 99% accuracy on the training set, but it will do much worse on the cross validation set because it has overfit the training data.
+
+ A good classifier should have both a high precision and high recall on the cross validation set.
+
+%------------------------------------------------------------%
+Q5
+
+CORRECT The "error analysis" process of manually examining the examples which your algorithm got wrong
+can help suggest what are good steps to take (e.g., developing new features) to improve your algorithm's
+performance.
+
+CORRECT
+Using a very large training set makes it unlikely for model to overfit the training data.
 
 
 \end{document}
