@@ -167,5 +167,77 @@ Suppose a massive dataset is available for training a learning algorithm. Traini
 	\textbf{No} - As we saw with neural networks, polynomial features can still be insufficient to capture the complexity of the data, especially if the features are very high-dimensional. Instead, you should use a complex model with many parameters to fit to the large training set.
 	
 \end{itemize}
+\newpage
 
+
+
+Suppose you are training a logistic regression classifier using stochastic gradient descent. You find that the cost (say, cost(θ,(x(i),y(i))), averaged over the last 500 examples), plotted as a function of the number of iterations, is slowly increasing over time. Which of the following changes are likely to help?
+
+Try using a larger learning rate α.
+
+Try averaging the cost over a larger number of examples (say 1000 examples instead of 500) in the plot.
+
+This is not an issue, as we expect this to occur with stochastic gradient descent.
+
+SELECTED Try using a smaller learning rate α.
+
+%===============================================================%
+
+Which of the following statements about stochastic gradient
+
+descent are true? Check all that apply.
+
+Before running stochastic gradient descent, you should randomly shuffle (reorder) the training set.
+
+In order to make sure stochastic gradient descent is converging, we typically compute Jtrain(θ) after each iteration (and plot it) in order to make sure that the cost function is generally decreasing.
+
+SELECTED One of the advantages of stochastic gradient descent is that it uses parallelization and thus runs much faster than batch gradient descent.
+
+SELECTED If you have a huge training set, then stochastic gradient descent may be much faster than batch gradient descent.
+
+%-----------------------------------------------%
+
+Which of the following statements about online learning are true? Check all that apply.
+
+One of the advantages of online learning is that there is no need to pick a learning rate α.
+
+SELECTED When using online learning, in each step we get a new example (x,y), perform one step of (essentially stochastic gradient descent) learning on that example, and then discard that example and move on to the next.
+
+SELECTED In the approach to online learning discussed in the lecture video, we repeatedly get a single training example, take one step of stochastic gradient descent using that example, and then move on to the next example.
+
+One of the disadvantages of online learning is that it requires a large amount of computer memory/disk space to store all the training examples we have seen.
+
+%-----------------------------------------------%
+
+Assuming that you have a very large training set, which of the
+
+following algorithms do you think can be parallelized using
+
+map-reduce and splitting the training set across different
+
+machines? Check all that apply.
+
+An online learning setting, where you repeatedly get a single example (x,y), and want to learn from that single example before moving on.
+
+Linear regression trained using batch gradient descent.
+
+A neural network trained using batch gradient descent.
+
+Logistic regression trained using stochastic gradient descent.
+
+%-----------------------------------------------%
+
+Which of the following statements about map-reduce are true? Check all that apply.
+
+In order to parallelize a learning algorithm using map-reduce, the first step is to figure out how to express the main work done by the algorithm as computing sums of functions of training examples.
+
+CORRECT If you are have just 1 computer, but your computer has multiple CPUs or multiple cores, then map-reduce might be a viable way to parallelize your learning algorithm.
+
+CORRECT If you have only 1 computer with 1 computing core, then map-reduce is unlikely to help.
+
+CORRECT Because of network latency and other overhead associated with map-reduce, if we run map-reduce using N computers, we might get less than an N-fold speedup compared to using 1 computer.
+
+Linear regression and logistic regression can be parallelized using map-reduce, but not neural network training.
+
+When using map-reduce with gradient descent, we usually use a single machine that accumulates the gradients from each of the map-reduce machines, in order to compute the parameter update for that iteration.
 \end{document}
