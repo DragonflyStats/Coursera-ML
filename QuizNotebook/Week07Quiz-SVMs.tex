@@ -41,17 +41,15 @@
 \begin{document}
 	
 
-\section{Week 7 Support Vector Machines}
+\section*{Week 7 Support Vector Machines}
 
 
 %===================================================================%
 \subsection*{Question 1}
 Suppose you have trained an SVM classifier with a Gaussian kernel, and it learned the following decision boundary on the training set:
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.7\linewidth]{images/SVM1}
-\caption{}
-\label{fig:SVM1}
 \end{figure}
 
 
@@ -60,7 +58,7 @@ You suspect that the SVM is underfitting your dataset. Should you try increasing
 \begin{itemize}
 	\item It would be reasonable to try decreasing C. It would also be reasonable to try decreasing $\sigma^2$.
 	
-	\item It would be reasonable to try increasing C. It would also be reasonable to try decreasing $\sigma^2$.
+	\item \textbf{CORRECT} It would be reasonable to try increasing C. It would also be reasonable to try decreasing $\sigma^2$.
 	
 	\item It would be reasonable to try increasing C. It would also be reasonable to try increasing $\sigma^2$.
 	
@@ -69,60 +67,54 @@ You suspect that the SVM is underfitting your dataset. Should you try increasing
 
 
 %===================================================================%
+\newpage
 \subsection*{Question 2}
 The formula for the Gaussian kernel is given by % similarity(x,l(1))=exp(−||x−l(1)||22σ2) .
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\linewidth]{images/SVM-Similarity}
 
-The figure below shows a plot of f1=similarity(x,l(1)) when $\sigma^2 = 1$.
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\linewidth]{images/SVM2}
 \end{figure}
-\subsubsection{Options}
-Which of the following is a plot of f1 when $\sigma^2 = 0.25$?
 
-\begin{itemize}
-	\item Option 1\begin{figure}[h!]
+The figure below shows a plot of $f_1$=similarity(x,l(1)) when $\sigma^2 = 1$.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{images/SVM2}
+\end{figure}
+\newpage
+\subsubsection*{Options}
+Which of the following is a plot of f1 when $\sigma^2 = 0.25$?
+\begin{figure}[h!]
 		\centering
-		\includegraphics[width=0.5\linewidth]{images/SVM3}
-	\end{figure}
-	
-	\item Option 2.
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[width=0.5\linewidth]{images/SVM4}
-	\end{figure}
-	
-	\item Option 3.
-	
-	\begin{figure}[h!]
-		\centering
-		\includegraphics[width=0.5\linewidth]{images/SVM5}
-	\end{figure}
-\end{itemize}
+		\includegraphics[width=0.4\linewidth]{images/SVM3}
+	\caption{Option 1}
+		\includegraphics[width=0.4\linewidth]{images/SVM4}
+	\caption{Option 2}
+		\includegraphics[width=0.4\linewidth]{images/SVM5}
+		\caption{Option 3}		
+\end{figure}
+\newpage
+
+
 
 
 %===================================================================%
 \subsection*{Question 3}
-The SVM solves
+\begin{figure}[h!]
+\centering
+\includegraphics[width=01.1\linewidth]{images/SVM-costquestion}
+\end{figure}
 
-% minθ C∑mi=1y(i)cost1(θTx(i))+(1−y(i))cost0(θTx(i))+∑nj=1θ2j
-where the functions cost0(z) and cost1(z) look like this:
-
-
-The first term in the objective is:
-
-% C∑mi=1y(i)cost1(θTx(i))+(1−y(i))cost0(θTx(i)).
-This first term will be zero if two of the following four conditions hold true. Which are the two conditions that would guarantee that this term equals zero?
 
 \begin{itemize}
 \item For every example with y(i)=1, we have that $ \theta^T x(i)\geq 0$.
 
 \item For every example with y(i)=0, we have that $ \theta^T x(i)\leq 0$.
 
-\item For every example with y(i)=1, we have that $ \theta^T x(i)\geq 1$.
+\item CORRECT For every example with y(i)=1, we have that $ \theta^T x(i)\geq 1$.
 
-\item For every example with y(i)=0, we have that $ \theta^T x(i)\leq -1$.
+\item CORRECT For every example with y(i)=0, we have that $ \theta^T x(i)\leq -1$.
 \end{itemize}
 
 %===================================================================%
@@ -133,13 +125,13 @@ After training your logistic regression classifier with gradient descent, you fi
 
 Which of the following might be promising steps to take? Check all that apply.
 \begin{itemize}
-	\item Try using a neural network with a large number of hidden units.
+	\item CORRECT Try using a neural network with a large number of hidden units.
 	
-	\item Use a different optimization method since using gradient descent to train logistic regression might result in a local minimum.
+	\item WRONG Use a different optimization method since using gradient descent to train logistic regression might result in a local minimum.
 	
 	\item Reduce the number of examples in the training set.
 	
-	\item Create / add new polynomial features.
+	\item CORRECT Create / add new polynomial features.
 \end{itemize}
 
 
@@ -151,11 +143,11 @@ Which of the following statements are true? Check all that apply.
 	\item If the data are linearly separable, an SVM using a linear kernel will return the same parameters $\theta$ regardless of the chosen value of
 	C (i.e., the resulting value of $\theta$ does not depend on C).
 	
-	\item It is important to perform feature normalization before using the Gaussian kernel.
+	\item CORRECT It is important to perform feature normalization before using the Gaussian kernel.
 	
 	\item Suppose you are using SVMs to do multi-class classification and 	would like to use the one-vs-all approach. If you have K differentclasses, you will train K - 1 different SVMs.
 	
-	\item The maximum value of the Gaussian kernel (i.e., sim(x,l(1))) is 1.
+	\item CORRECT The maximum value of the Gaussian kernel (i.e., sim(x,l(1))) is 1.
 \end{itemize}
 
 
