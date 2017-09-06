@@ -36,15 +36,17 @@ grad = zeros(size(theta));
 %           grad = grad + YOUR_CODE_HERE (using the temp variable)
 %
 
-prod1 = -1 * (y .* log(sigmoid(X * theta)));
-prod2 = (1 - y) .* log(1 - sigmoid(X * theta));
+Xtheta = X*theta;     % compute one time and use whenever needed; instead of calulating everytime
+
+prod1 = -1 * (y .* log(sigmoid(Xtheta)));
+prod2 = (1 - y) .* log(1 - sigmoid(Xtheta));
 
 thetaTemp = theta;
 thetaTemp(1) = 0;
 correction = sum(thetaTemp .^ 2) * (lambda / (2 * m));
 
 J = sum(prod1 - prod2) / m + correction;
-grad = (X' * (sigmoid(X * theta) - y)) * (1/m) + thetaTemp * (lambda / m);
+grad = (X' * (sigmoid(Xtheta) - y)) * (1/m) + thetaTemp * (lambda / m);
 
 
 
