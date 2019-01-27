@@ -40,17 +40,17 @@ You want to have a vectorized implementation of this (i.e., one that does not us
 Your Answer		Score	Explanation
 
 z = sigmoid(x); a2 = Theta1 * z;
-Correct	0.25	 You should apply the sigmoid function after multiplying with Θ(1), not before.
+Inorrect	0.25	 You should apply the sigmoid function after multiplying with Θ(1), not before.
 
 a2 = sigmoid (Theta2 * x);
 Inorrect	0.00	 Θ(2) specifies the parameters from the second to third layers, not first to second.
 
 z = Theta1 * x; a2 = sigmoid (z);
-Inorrect	0.00	 This version computes a(2)=g(Θ(1)x) correctly in two steps, first the multiplication and then the sigmoid activation.
+Correct	1.00	 This version computes a(2)=g(Θ(1)x) correctly in two steps, first the multiplication and then the sigmoid activation.
 
 z = sigmoid(x); a2 = sigmoid (Theta1 * z);
-Correct	0.25	 You do not need to apply the sigmoid function to the inputs.
-Total		0.50 / 1.00	
+Inorrect	0.00	 You do not need to apply the sigmoid function to the inputs.
+Total		1.00 / 1.00	
 Question 4
 You are using the neural network pictured below and have learned the parameters Θ(1)=[112.10.61.3−1.2] (used to compute a(2)) and Θ(2)=[14.53.1] (used to compute a(3)} as a function of a(2)). Suppose you swap the parameters for the first hidden layer between its two units so Θ(1)=[110.62.1−1.21.3] and also swap the output layer so Θ(2)=[13.14.5]. How will this change the value of the output hΘ(x)? 
 Image for question 4
