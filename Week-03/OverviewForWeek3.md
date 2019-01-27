@@ -60,7 +60,7 @@ While it is true they cannot be separated, logistic regression will outperform l
 #### Question 5
 Which of the following statements are true? Check all that apply.
 - For logistic regression, sometimes gradient descent will converge to a local minimum (and fail to find the global minimum). - This is the reason we prefer more advanced optimization algorithms such as fminunc (conjugate gradient/BFGS/L-BFGS/etc).
- Since we train one classifier when there are two classes, we train two classifiers when there are three classes (and we do one-vs-all classification).
+- Since we train one classifier when there are two classes, we train two classifiers when there are three classes (and we do one-vs-all classification).
 - The sigmoid function g(z) is never greater than one (>1). g(z)=11+e-z
 - The one-vs-all technique allows you to use logistic regression for problems in which eachy(i) comes from a fixed, discrete set of values.
 
