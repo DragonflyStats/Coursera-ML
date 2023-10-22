@@ -1,8 +1,0 @@
-
-\section{Clustering Analysis}
-
-\subsection{k-means Clustering}
-
-A \textbf{bivariate outlier} describes an observation having an unusual combination of values for both
-variables.
-
