@@ -1,30 +1,30 @@
-November 25 - December 2
+### **Machine Learning: Neural Networks & Core Concepts**
 
-Neural Networks: Learning
+**November 25 - December 2**
 
-Programming Exercise : Neural network learning (Ex4)
+#### **Programming Exercise: Neural Network Learning (Ex4)**
 
+---
 
+#### **Course Schedule**
 
- 
-Introduction to Machine Learning. Univariate linear regression. (Optional: Linear algebra review.)
-Multivariate linear regression. Practical aspects of implementation. Octave tutorial.
-Logistic regression, One-vs-all, Regularization.
-Neural Networks, backpropagation, gradient checking.
-Support Vector Machines (SVMs) and intuitions. Quick survey of other algorithms: Naive Bayes, Decision trees, Boosting.
-Practical advice for applying learning algorithms: How to develop, debugging, feature/model design, setting up experiment structure.
-Unsupervised learning: Agglomerative clustering, K-means, PCA, when to use each. (Optional/extra credit: ICA).
-Anomaly detection. Combining supervised and unsupervised.
-Other applications: Recommender systems. Learning to rank (search).
-Large-scale/parallel machine learning and big data. ML system design/practical methods. Team design of ML systems.
+* **Univariate Linear Regression:** Introduction to Machine Learning. (Optional: Linear algebra review.)
+* **Multivariate Linear Regression:** Practical aspects of implementation. Octave tutorial.
+* **Logistic Regression:** One-vs-all classification and Regularization.
+* **Neural Networks:** Backpropagation and gradient checking.
+* **Support Vector Machines (SVMs):** Core intuitions and a quick survey of other algorithms: Naive Bayes, Decision Trees, and Boosting.
+* **Practical Advice:** How to develop, debug, and design features and models. Setting up an experiment structure.
+* **Unsupervised Learning:** Agglomerative clustering, K-means, and Principal Component Analysis (PCA). (Optional: Independent Component Analysis - ICA).
+* **Anomaly Detection:** Combining supervised and unsupervised learning.
+* **Other Applications:** Recommender systems and Learning to Rank (search).
+* **Large-scale Machine Learning:** Big data, parallel machine learning, and ML system design.
 
+---
 
-####Support vector machine (SVM) 
+#### **Algorithm Definitions**
 
-A support vector machine (SVM) is a concept in computer science for a set of related supervised learning methods that analyze data and recognize patterns, used for classificationand regression analysis. The standard SVM takes a set of input data and predicts, for each given input, which of two possible classes comprises the input, making the SVM a non-probabilistic binary linear classifier.
+**Support Vector Machine (SVM)**
+A **Support Vector Machine (SVM)** is a supervised learning method used for both classification and regression. The standard SVM is a non-probabilistic, binary linear classifier that finds a hyperplane to separate two classes of data. Its core strength lies in its ability to effectively handle complex, non-linear classification tasks by using the "kernel trick."
 
-
-####Naive Bayes classifier
-
-A Naive Bayes classifier is a simple probabilistic classifier based on applying Bayes' theorem with strong (naive) independence assumptions. A more descriptive term for the underlying probability model would be "independent feature model".
-In simple terms, a naive Bayes classifier assumes that the presence (or absence) of a particular feature of a class is unrelated to the presence (or absence) of any other feature, given the class variable. For example, a fruit may be considered to be an apple if it is red, round, and about 4" in diameter. Even if these features depend on each other or upon the existence of the other features, a naive Bayes classifier considers all of these properties to independently contribute to the probability that this fruit is an apple.
+**Naive Bayes Classifier**
+A **Naive Bayes classifier** is a simple probabilistic classifier based on **Bayes' theorem**. It makes a strong assumption that the presence of a particular feature of a class is unrelated to the presence of any other feature, given the class variable. This "naive" independence assumption makes the model computationally efficient and effective for tasks like spam filtering and text classification.
