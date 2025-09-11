@@ -1,0 +1,47 @@
+### **Machine Learning Concepts: High Variance and Model Evaluation**
+
+This document provides an overview of high variance in machine learning models and a series of questions to test your understanding of key concepts.
+
+#### **High Variance**
+High variance is a common problem in machine learning where an algorithm performs well on the training data but poorly on unseen data. It is characterized by:
+* A significant gap in errors between the training and testing data sets.
+* The algorithm having **overfit** the training data.
+* The problem can often be addressed by increasing the regularization parameter ($\lambda$), which reduces overfitting.
+
+The recommended way to choose the regularization parameter is to select the value that results in the lowest cross-validation error. You should never use the training data set for this purpose.
+
+---
+
+### **Quiz on Machine Learning Concepts**
+
+**1. Diagnosing Bias vs. Variance**
+You train a learning algorithm and find that it has unacceptably high error on the test set. You plot the learning curve and obtain the figure below. Is the algorithm suffering from high bias, high variance, or neither?
+
+* High variance
+
+**2. Addressing High Variance**
+Suppose you have implemented regularized logistic regression for image classification. When you test your hypothesis on a new set of images, you find that it has large errors, but it performs well (low error) on the training set. Which of the following are promising steps to take?
+
+* Get more training examples.
+* Try using a smaller set of features.
+
+**3. Addressing High Bias**
+Suppose you have implemented regularized logistic regression to predict customer purchases on a web shopping site. When you test your hypothesis on a new set of customers, it has large errors. Furthermore, the hypothesis performs poorly on the training set. Which of the following might be promising steps to take?
+
+* Try adding polynomial features.
+* Try decreasing the regularization parameter $\lambda$.
+
+**4. True Statements on Model Evaluation**
+Which of the following statements are true?
+
+* Suppose you are using linear regression to predict housing prices and your dataset is sorted by increasing house sizes. It is then important to randomly shuffle the dataset before splitting it into training, validation, and test sets.
+* A typical split of a dataset into training, validation, and test sets might be 60% for training, 20% for validation, and 20% for testing.
+
+**5. True Statements on High Bias vs. High Variance**
+Which of the following statements are true?
+
+* When debugging learning algorithms, it is useful to plot a learning curve to understand if there is a high bias or high variance problem.
+* If a learning algorithm is suffering from high variance, adding more training examples is likely to improve the test error.
+* If a learning algorithm is suffering from high bias, adding more training examples alone may not significantly improve the test error.
+
+---
